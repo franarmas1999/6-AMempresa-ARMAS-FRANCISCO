@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$fuente: 'Montserrat', sans-serif;
+$color: rgb(0,0,0);
+
+/*INDEX*/
+h1{
+    color: rgb(255, 255, 255);
+    background-color: $color;
+    font-size: 70px;
+    font-family: $fuente;
+    font-weight: 1200;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+}
+/*ICONOS REDES SOCIALES*/
+.redesSociales{
+    background-color: $color;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+
+    i{
+        padding-left: 20px;
+        padding-right: 20px;
+    } 
+
+    i:hover{
+        cursor: pointer;
+    }
+}
+
+
+/*NAVBAR MOBILE INDEX*/
+.navbarMobile{
+    background-color: $color;
+
+    button{
+        font-size: 15px;
+    }
+}
+
+
+/*CARRUSEL INDEX*/
+.carousel-item img{
+    height: calc(100vh - 180px);
+}
+
+/*TITULOS PARA DESTACAR*/
+h6{
+    background-color: rgb(243, 6, 6);
+    text-align: center;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    border-top: solid 2px $color;
+    border-bottom: solid 2px $color;
+    font-family: $fuente;
+    font-weight: 1000;
+}
+
+/*FOOTER SITIO WEB UTILIZANDO FLEXBOX*/ 
+footer{
+    text-align: center;
+    background-color: $color;
+    color: rgb(255, 255, 255);
+
+    div{
+        padding: 15px;
+    }
+}
+
+.footer__center{
+    border-top: solid 2px rgb(255, 255, 255);
+    border-bottom: solid 2px rgb(255, 255, 255);
+
+    i{
+        color: rgb(240, 116, 15);
+        margin-left: 10px;
+    }
+}
+
+.fa-envelope{
+    color: rgb(228, 199, 33);
+    margin-left: 10px;
+}
+.fa-whatsapp{
+    border-radius: 15px;
+    background-color: rgb(39, 223, 14);
+    margin-left: 10px;
+}
+
+
+/*MEDIA QUERIS INDEX*/
+@media screen and (max-width: 576px){
+    .navDeskop{
+        display: none;
+    }
+}
+@media screen and (min-width: 576px){
+    .navbarMobile{
+        display: none;
+    }
+    /*NAVBAR DESKOP INDEX*/
+    .navDeskop{
+        display: block;
+        background-color: $color;
+    }
+    .navbarIndex{
+        margin-bottom: -15px;
+
+        ul{
+            padding-right: 0px;
+            list-style: none;
+            text-align: right;
+            font-family: $fuente;
+        }
+        ul li{
+            display: inline-block;
+            margin: -3px;
+            border-right: solid 1px rgb(255, 255, 255);
+            padding: 10px;
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            display: block;
+            padding: 0px;
+            }
+        
+        ul li:hover{
+                background-color: rgb(255, 255, 255);
+            }
+        
+            ul li a:hover{
+                color: $color;
+            }
+    }
+
+    .redesSociales{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        i{
+            padding: 10px;
+        }
+    }
+    h1{
+        text-align: left;
+        padding-left: 20px;
+    }
+    .carousel-item img{
+        height: calc(100vh - 120px);
+        
+    }
+    
+}
+@media screen and (min-width: 768px){
+    h1{
+        font-size: 80px;
+    }
+    .navbarIndex ul li a{
+        font-size: 16px;
+    }
+    /*FOOTER PASA A SER DESKOP*/
+    footer{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer__center{
+        flex-grow: 3;
+        border-bottom: none;
+        border-top: none;
+        border-left: solid 2px rgb(255, 255, 255);
+        border-right: solid 2px rgb(255, 255, 255);
+    }
+    .footer__left{
+        flex-grow: 2;
+    }
+    .footer__right{
+        flex-grow: 2;
+    }
+
+}
+@media screen and (min-width: 992px){
+    h1{
+        font-size: 110px;
+    }
+    .navDeskop{
+        position: absolute;
+        top: 110px;
+        right: 10px;
+    }
+}
+@media screen and (min-width: 992px){
+    .navDeskop{
+        position: absolute;
+        top: 90px;
+    }
+    .navbarIndex ul li a{
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .redesSociales i:hover{
+        transform: scale(1.3);
+    }
+}
