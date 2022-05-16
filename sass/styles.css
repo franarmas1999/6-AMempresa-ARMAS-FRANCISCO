@@ -21,19 +21,19 @@ h1 {
 }
 
 /*ICONOS REDES SOCIALES*/
-.redesSociales {
+.redesSociales, .redesSociales--catalogo, .redesSociales__pages, .redesSociales__sN {
   background-color: black;
   color: white;
   font-size: 30px;
   text-align: center;
 }
 
-.redesSociales i {
+.redesSociales i, .redesSociales--catalogo i, .redesSociales__pages i, .redesSociales__sN i {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.redesSociales i:hover {
+.redesSociales i:hover, .redesSociales--catalogo i:hover, .redesSociales__pages i:hover, .redesSociales__sN i:hover {
   cursor: pointer;
 }
 
@@ -52,7 +52,8 @@ h1 {
 }
 
 /*TITULOS PARA DESTACAR*/
-h6 {
+h4 {
+  font-size: 16px;
   background-color: #f30606;
   text-align: center;
   padding: 10px;
@@ -140,12 +141,12 @@ footer div {
   .navbarIndex ul li a:hover {
     color: black;
   }
-  .redesSociales {
+  .redesSociales, .redesSociales--catalogo, .redesSociales__pages, .redesSociales__sN {
     position: absolute;
     top: 10px;
     right: 10px;
   }
-  .redesSociales i {
+  .redesSociales i, .redesSociales--catalogo i, .redesSociales__pages i, .redesSociales__sN i {
     padding: 10px;
   }
   h1 {
@@ -214,9 +215,494 @@ footer div {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .redesSociales i:hover {
+  .redesSociales i:hover, .redesSociales--catalogo i:hover, .redesSociales__pages i:hover, .redesSociales__sN i:hover {
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
+  }
+}
+
+/*CATALOGO**/
+.bodyCatalogo {
+  background-color: black;
+}
+
+/*ANIMACION TEXTO ENVIO*/
+.envios {
+  background-color: #f30606;
+  padding: 0px;
+  text-align: center;
+}
+
+.envios p {
+  font-weight: 1000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: white;
+  -webkit-animation: idavuelta;
+          animation: idavuelta;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes idavuelta {
+  50% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  100% {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+}
+
+@keyframes idavuelta {
+  50% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  100% {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+}
+
+.navPages {
+  display: none;
+}
+
+h2 {
+  font-size: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+/*REDES SOCIALES CATALOGO Y DEMAS PAGES*/
+.navCatalogo {
+  background-color: black;
+}
+
+/*GRID CATALOGO IMAGENES*/
+.grid__catalogo--hijos {
+  position: relative;
+}
+
+/*MODIFICACON ANIMACION*/
+.grid__catalogo--hijos img:hover {
+  background: #F5A9A9;
+  -webkit-animation: 1s chicle 1;
+          animation: 1s chicle 1;
+}
+
+@-webkit-keyframes chicle {
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+  }
+  50% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+  }
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+  }
+}
+
+@keyframes chicle {
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+  }
+  50% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+  }
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+  }
+}
+
+#grid__catalogo img {
+  height: 250px;
+  width: 100%;
+}
+
+.text__imagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+/*MEDIA QUEIRS CATALOGO*/
+@media screen and (min-width: 480px) {
+  #grid__catalogo img {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .navPages {
+    display: block;
+    background-color: black;
+  }
+  .navPages ul {
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .navPages ul li {
+    display: inline-block;
+    border-right: 2px solid white;
+  }
+  .navPages ul li a {
+    text-decoration: none;
+    margin: 15px;
+    color: white;
+    font-size: 16px;
+  }
+  .navCatalogo {
+    display: none;
+  }
+  h2 {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .redesSociales--catalogo {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+  }
+  .redesSociales--catalogo i {
+    padding: 10px;
+  }
+  #grid__catalogo img {
+    height: calc(100vh - 100px);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navPages ul {
+    text-align: right;
+  }
+  h2 {
+    font-size: 70px;
+  }
+  .redesSociales--catalogo {
+    top: 90px;
+  }
+  .redesSociales--catalogo i:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  #grid__catalogo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (300px)[3];
+        grid-template-rows: repeat(3, 300px);
+  }
+  #grid__catalogo img {
+    height: calc(100vh - 180px);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #grid__catalogo {
+    margin: 20px;
+    margin-top: 0;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: (150px)[3];
+        grid-template-rows: repeat(3, 150px);
+  }
+  .hotsale {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  #grid__catalogo img {
+    height: 100%;
+  }
+  .pijama {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+  }
+  .accesorios {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .colchones {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+    grid-column: 4/6;
+  }
+}
+
+/*CLUB 6AM*/
+.card {
+  color: white;
+}
+
+.clubInfo p {
+  color: white;
+}
+
+.redesSociales__pages {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+}
+
+.navC ul {
+  list-style: none;
+  margin: 0px;
+  padding: 5px;
+  text-align: right;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navC ul li {
+  display: inline-block;
+  border-right: 2px solid white;
+}
+
+.navC ul li a {
+  text-decoration: none;
+  margin: 15px;
+  color: white;
+  font-size: 16px;
+}
+
+.portadaClub {
+  width: 100vw;
+  height: calc(100vh - 130px);
+  background-image: url(../image/comunidad.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h3 {
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+  color: white;
+}
+
+.clubInfo p {
+  text-align: center;
+  line-height: 30px;
+}
+
+.subtittle__club {
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.card a {
+  display: block;
+  margin: auto;
+}
+
+.boton--1 {
+  background-color: #2473db;
+  border: solid 4px #2473db;
+}
+
+.boton--2 {
+  background-color: #1a626b;
+  border: solid 4px #1a626b;
+}
+
+.boton--3 {
+  background-color: #1c568d;
+  border: solid 4px #1c568d;
+}
+
+.boton--4 {
+  background-color: #2d2e7a;
+  border: solid 4px #2d2e7a;
+}
+
+.testimonios video {
+  width: 100%;
+}
+
+.testimonios_contenedor {
+  margin-bottom: 30px;
+}
+
+/*MEDIA QUERIS CLUB*/
+@media screen and (min-width: 480px) {
+  .clubInfo p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .redesSociales__pages {
+    display: none;
+  }
+  .navC {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navC ul {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .clubInfo p {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+/*SOBRE NOSOTROS*/
+h2 {
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.redesSociales__sN {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+}
+
+.sobreNosotros {
+  height: 100vw;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 243, 243, 0.3)), to(rgba(247, 243, 243, 0.3))), url(../image/pexels-ketut-subiyanto-4545160.jpg);
+  background-image: linear-gradient(rgba(247, 243, 243, 0.3), rgba(247, 243, 243, 0.3)), url(../image/pexels-ketut-subiyanto-4545160.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.sobreNosotros p {
+  color: black;
+  text-align: center;
+  line-height: 25px;
+  padding: 10px;
+}
+
+.historia img {
+  width: 100%;
+}
+
+.historia p {
+  color: black;
+  text-align: center;
+}
+
+.historia__pasos {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*MEDIA QUEIRIS SOBRE NOSOTROS*/
+@media screen and (min-width: 480px) {
+  .sobreNosotros p {
+    padding: 30px;
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .sobreNosotros p {
+    padding: 30px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .historia p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .redesSociales__sN {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sobreNosotros {
+    height: calc(100vh - 5px);
+  }
+  .sobreNosotros p {
+    line-height: 60px;
+  }
+  .historia p {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .sobreNosotros p {
+    line-height: 80px;
+    font-size: 40px;
+  }
+  .historia p {
+    line-height: 40px;
+    font-size: 25px;
+    padding: 15px;
+  }
+}
+
+/*CONTACOT*/
+.enviar {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+}
+
+form div {
+  padding: 10px;
+  color: white;
+}
+
+.formulario {
+  margin-bottom: 20px;
+}
+
+/*MEDIA QUERIS CONTACTO*/
+@media screen and (min-width: 992px) {
+  .formulario {
+    width: 800px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

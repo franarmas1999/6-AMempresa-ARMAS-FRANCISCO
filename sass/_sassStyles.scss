@@ -1,0 +1,633 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$estilos: (
+    color: rgb(0,0,0),
+);
+$fuente: 'Montserrat', sans-serif;
+
+
+/*INDEX*/
+h1{
+    color: rgb(255, 255, 255);
+    background-color: map-get($estilos, color);
+    font-size: 70px;
+    font-family: $fuente;
+    font-weight: 1200;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+}
+/*ICONOS REDES SOCIALES*/
+.redesSociales{
+    background-color: map-get($estilos, color);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+
+    i{
+        padding-left: 20px;
+        padding-right: 20px;
+    } 
+
+    i:hover{
+        cursor: pointer;
+    }
+}
+
+
+/*NAVBAR MOBILE INDEX*/
+.navbarMobile{
+    background-color: map-get($estilos, color);
+
+    button{
+        font-size: 15px;
+    }
+}
+
+
+/*CARRUSEL INDEX*/
+.carousel-item img{
+    height: calc(100vh - 180px);
+}
+
+/*TITULOS PARA DESTACAR*/
+h4{
+    font-size: 16px;
+    background-color: rgb(243, 6, 6);
+    text-align: center;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    border-top: solid 2px map-get($estilos, color);
+    border-bottom: solid 2px map-get($estilos, color);
+    font-family: $fuente;
+    font-weight: 1000;
+}
+
+/*FOOTER SITIO WEB UTILIZANDO FLEXBOX*/ 
+footer{
+    text-align: center;
+    background-color: map-get($estilos, color);
+    color: rgb(255, 255, 255);
+
+    div{
+        padding: 15px;
+    }
+}
+
+.footer__center{
+    border-top: solid 2px rgb(255, 255, 255);
+    border-bottom: solid 2px rgb(255, 255, 255);
+
+    i{
+        color: rgb(240, 116, 15);
+        margin-left: 10px;
+    }
+}
+
+.fa-envelope{
+    color: rgb(228, 199, 33);
+    margin-left: 10px;
+}
+.fa-whatsapp{
+    border-radius: 15px;
+    background-color: rgb(39, 223, 14);
+    margin-left: 10px;
+}
+
+
+/*MEDIA QUERIS INDEX*/
+@media screen and (max-width: 576px){
+    .navDeskop{
+        display: none;
+    }
+}
+@media screen and (min-width: 576px){
+    .navbarMobile{
+        display: none;
+    }
+    /*NAVBAR DESKOP INDEX*/
+    .navDeskop{
+        display: block;
+        background-color: map-get($estilos, color);
+    }
+    .navbarIndex{
+        margin-bottom: -15px;
+
+        ul{
+            padding-right: 0px;
+            list-style: none;
+            text-align: right;
+            font-family: $fuente;
+        }
+        ul li{
+            display: inline-block;
+            margin: -3px;
+            border-right: solid 1px rgb(255, 255, 255);
+            padding: 10px;
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            display: block;
+            padding: 0px;
+            }
+        
+        ul li:hover{
+                background-color: rgb(255, 255, 255);
+            }
+        
+            ul li a:hover{
+                color: map-get($estilos, color);
+            }
+    }
+
+    .redesSociales{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        i{
+            padding: 10px;
+        }
+    }
+    h1{
+        text-align: left;
+        padding-left: 20px;
+    }
+    .carousel-item img{
+        height: calc(100vh - 120px);
+        
+    }
+    
+}
+@media screen and (min-width: 768px){
+    h1{
+        font-size: 80px;
+    }
+    .navbarIndex ul li a{
+        font-size: 16px;
+    }
+    /*FOOTER PASA A SER DESKOP*/
+    footer{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer__center{
+        flex-grow: 3;
+        border-bottom: none;
+        border-top: none;
+        border-left: solid 2px rgb(255, 255, 255);
+        border-right: solid 2px rgb(255, 255, 255);
+    }
+    .footer__left{
+        flex-grow: 2;
+    }
+    .footer__right{
+        flex-grow: 2;
+    }
+
+}
+@media screen and (min-width: 992px){
+    h1{
+        font-size: 110px;
+    }
+    .navDeskop{
+        position: absolute;
+        top: 110px;
+        right: 10px;
+    }
+}
+@media screen and (min-width: 992px){
+    .navDeskop{
+        position: absolute;
+        top: 90px;
+    }
+    .navbarIndex ul li a{
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .redesSociales i:hover{
+        transform: scale(1.3);
+    }
+}
+
+/*CATALOGO**/
+.bodyCatalogo{
+    background-color: map-get($estilos, color);
+}
+
+/*ANIMACION TEXTO ENVIO*/
+.envios{
+    background-color: rgb(243, 6, 6);
+    padding: 0px;
+    text-align: center;
+}
+.envios p{
+    font-weight: 1000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    animation: idavuelta;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes idavuelta{
+    50%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(-40px);
+    }
+}
+.navPages{
+    display: none;
+}
+h2{
+    font-size: 50px;
+    background-color: map-get($estilos, color);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+/*REDES SOCIALES CATALOGO Y DEMAS PAGES*/
+
+.redesSociales--catalogo{
+    @extend .redesSociales;
+}
+
+.navCatalogo{
+    background-color: map-get($estilos, color);
+}
+
+/*GRID CATALOGO IMAGENES*/
+
+.grid__catalogo--hijos{
+    position: relative;
+}
+/*MODIFICACON ANIMACION*/
+.grid__catalogo--hijos img:hover{
+    background: #F5A9A9;
+    animation: 1s chicle 1;
+}
+
+@keyframes chicle{
+    30%{
+        -webkit-transform: 
+            scaleX(1.25)
+            scaleY(0.75);
+    }
+    50%{
+        -webkit-transform: 
+            scaleX(0.75)
+            scaleY(1.25);
+    }
+    60%{
+        -webkit-transform: 
+            scaleX(1.15)
+            scaleY(0.85);
+    }
+}
+#grid__catalogo img{
+    height: 250px;
+    width: 100%;
+}
+.text__imagen{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 10px;
+    background-color: map-get($estilos, color);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/*MEDIA QUEIRS CATALOGO*/
+@media screen and (min-width: 480px){
+    #grid__catalogo img{
+        height: 300px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 576px){
+    .navPages{
+        display: block;
+        background-color: map-get($estilos, color);
+    }
+    .navPages ul{
+        list-style: none;
+        margin: 0px;
+        padding: 5px;
+        text-align: center;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .navPages ul li{
+        display: inline-block;
+        border-right: 2px solid rgb(255, 255, 255);
+    }
+    .navPages ul li a{
+        text-decoration: none;
+        margin: 15px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+    }
+    .navCatalogo{
+        display: none;
+    }
+    h2{
+        text-align: left;
+        padding-left: 20px;
+    }
+    .redesSociales--catalogo{
+        position: absolute;
+        top: 60px;
+        right: 10px;
+    }
+    .redesSociales--catalogo i{
+        padding: 10px;
+    }
+    #grid__catalogo img{
+        height: calc(100vh - 100px);
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px){
+    .navPages ul{
+        text-align: right;
+    }
+    h2{
+        font-size: 70px;
+    }
+    .redesSociales--catalogo{
+        top: 90px;
+    }
+    .redesSociales--catalogo i:hover{
+        transform: scale(1.3);
+    }
+    #grid__catalogo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 300px);
+    }
+    #grid__catalogo img{
+        height: calc(100vh - 180px);
+        width: 100%;
+    }
+}
+@media screen and (min-width: 992px){
+    
+    #grid__catalogo{
+        margin: 20px;
+        margin-top: 0;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 150px);
+    }
+    .hotsale{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    #grid__catalogo img{
+        height: 100%;
+    }
+    .pijama{
+        grid-column: 4/5;
+        grid-row: 2/4;
+    }
+    .accesorios{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .colchones{
+        grid-column: 4/6;
+    }
+}
+
+
+/*CLUB 6AM*/
+.card{
+    color: rgb(255, 255, 255);
+}
+.clubInfo p{
+    color: rgb(255, 255, 255);
+}
+.redesSociales__pages{
+    @extend .redesSociales;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+}
+
+.navC ul{
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+    text-align: right;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+.navC ul li{
+    display: inline-block;
+    border-right: 2px solid rgb(255, 255, 255);
+}
+.navC ul li a{
+    text-decoration: none;
+    margin: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+.portadaClub{
+    width: 100vw;
+    height: calc(100vh - 130px);
+    background-image: url(../image/comunidad.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+h3{
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.clubInfo p{
+    text-align: center;
+    line-height: 30px;
+}
+.subtittle__club{
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+.card a{
+    display: block;
+    margin: auto;
+}
+
+$coloresboton: (
+    1: rgb(36, 115, 219),
+    2: rgb(26, 98, 107),
+    3: rgb(28, 86, 141),
+    4: rgb(45, 46, 122),
+);
+@each $colors, $colorboton in $coloresboton {
+    .boton--#{$colors}{
+        background-color: $colorboton;
+        border: solid 4px $colorboton;
+    }
+}
+
+.testimonios video{
+    width: 100%;
+}
+.testimonios_contenedor{
+
+    margin-bottom: 30px;
+}
+/*MEDIA QUERIS CLUB*/
+@media screen and (min-width: 480px){
+    .clubInfo p{
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}
+@media screen and (max-width: 600px){
+    .redesSociales__pages{
+        display: none;
+    }
+    .navC{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 900px){
+    .navC ul{
+        text-align: center;
+    }
+}
+@media screen and (min-width: 900px){
+    .clubInfo p{
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
+
+
+/*SOBRE NOSOTROS*/
+h2{
+    text-align: center;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+.redesSociales__sN{
+    @extend .redesSociales;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+}
+
+.sobreNosotros{
+    height: 100vw;
+    background-image: linear-gradient(rgba(247, 243, 243, 0.3), rgba(247, 243, 243, 0.3)), url(../image/pexels-ketut-subiyanto-4545160.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.sobreNosotros p{
+    color: map-get($estilos, color);
+    text-align: center;
+    line-height: 25px;
+    padding: 10px;
+}
+
+.historia img{
+    width: 100%;
+}
+.historia p{
+    color: map-get($estilos, color);
+    text-align: center;
+}
+.historia__pasos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*MEDIA QUEIRIS SOBRE NOSOTROS*/
+@media screen and (min-width: 480px){
+    .sobreNosotros p{
+        padding: 30px;
+        font-size: 20px;
+        line-height: 35px;
+    }
+}
+@media screen and (min-width: 600px){
+    .sobreNosotros p{
+        padding: 30px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .historia p{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 900px){
+    .redesSociales__sN{
+        display: none;
+    }
+}
+@media screen and (min-width: 992px){
+    .sobreNosotros{
+        height: calc(100vh - 5px);
+    }
+    .sobreNosotros p{
+        line-height: 60px;
+    }
+    .historia p{
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 1300px){
+    .sobreNosotros p{
+        line-height: 80px;
+        font-size: 40px;
+    }
+    .historia p{
+        line-height: 40px;
+        font-size: 25px;
+        padding: 15px;
+    }
+}
+
+/*CONTACOT*/
+
+.enviar{
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    
+}
+form div{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+.formulario{
+    margin-bottom: 20px;
+}
+
+/*MEDIA QUERIS CONTACTO*/
+@media screen and (min-width: 992px){
+    .formulario{
+        width: 800px;
+    }
+}
