@@ -6,13 +6,14 @@
 
 $estilos: (
     color: rgb(0,0,0),
+    color2: rgb(255, 255, 255)
 );
 $fuente: 'Montserrat', sans-serif;
 
 
 /*INDEX*/
 h1{
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
     background-color: map-get($estilos, color);
     font-size: 70px;
     font-family: $fuente;
@@ -24,7 +25,7 @@ h1{
 /*ICONOS REDES SOCIALES*/
 .redesSociales{
     background-color: map-get($estilos, color);
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
     font-size: 30px;
     text-align: center;
 
@@ -60,7 +61,7 @@ h4{
     background-color: rgb(243, 6, 6);
     text-align: center;
     padding: 10px;
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
     margin: 0;
     border-top: solid 2px map-get($estilos, color);
     border-bottom: solid 2px map-get($estilos, color);
@@ -72,7 +73,7 @@ h4{
 footer{
     text-align: center;
     background-color: map-get($estilos, color);
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
 
     div{
         padding: 15px;
@@ -80,8 +81,8 @@ footer{
 }
 
 .footer__center{
-    border-top: solid 2px rgb(255, 255, 255);
-    border-bottom: solid 2px rgb(255, 255, 255);
+    border-top: solid 2px map-get($estilos, color2);
+    border-bottom: solid 2px map-get($estilos, color2);
 
     i{
         color: rgb(240, 116, 15);
@@ -127,7 +128,7 @@ footer{
         ul li{
             display: inline-block;
             margin: -3px;
-            border-right: solid 1px rgb(255, 255, 255);
+            border-right: solid 1px map-get($estilos, color2);;
             padding: 10px;
         }
 
@@ -140,7 +141,7 @@ footer{
             }
         
         ul li:hover{
-                background-color: rgb(255, 255, 255);
+                background-color: map-get($estilos, color2);
             }
         
             ul li a:hover{
@@ -182,8 +183,8 @@ footer{
         flex-grow: 3;
         border-bottom: none;
         border-top: none;
-        border-left: solid 2px rgb(255, 255, 255);
-        border-right: solid 2px rgb(255, 255, 255);
+        border-left: solid 2px map-get($estilos, color2);
+        border-right: solid 2px map-get($estilos, color2);
     }
     .footer__left{
         flex-grow: 2;
@@ -228,16 +229,18 @@ footer{
     background-color: rgb(243, 6, 6);
     padding: 0px;
     text-align: center;
+
+    p{
+        font-weight: 1000;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        color: map-get($estilos, color2);
+        animation: idavuelta;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
 }
-.envios p{
-    font-weight: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    animation: idavuelta;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
+
 @keyframes idavuelta{
     50%{
         transform: translateX(40px);
@@ -252,7 +255,7 @@ footer{
 h2{
     font-size: 50px;
     background-color: map-get($estilos, color);
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
     text-align: center;
     padding: 10px;
     margin: 0;
@@ -269,14 +272,29 @@ h2{
 }
 
 /*GRID CATALOGO IMAGENES*/
+#grid__catalogo img{
+    height: 250px;
+    width: 100%;
+}
 
 .grid__catalogo--hijos{
     position: relative;
-}
-/*MODIFICACON ANIMACION*/
-.grid__catalogo--hijos img:hover{
-    background: #F5A9A9;
-    animation: 1s chicle 1;
+
+    img:hover{
+        background: #F5A9A9;
+        animation: 1s chicle 1;
+    }
+    div{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 5px 10px;
+        background-color: map-get($estilos, color);
+        color: map-get($estilos, color2);
+        font-size: 20px;
+    }
 }
 
 @keyframes chicle{
@@ -296,21 +314,7 @@ h2{
             scaleY(0.85);
     }
 }
-#grid__catalogo img{
-    height: 250px;
-    width: 100%;
-}
-.text__imagen{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 5px 10px;
-    background-color: map-get($estilos, color);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-}
+
 
 /*MEDIA QUEIRS CATALOGO*/
 @media screen and (min-width: 480px){
@@ -323,25 +327,29 @@ h2{
     .navPages{
         display: block;
         background-color: map-get($estilos, color);
+        
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        li{
+            display: inline-block;
+            border-right: 2px solid map-get($estilos, color2);
+        }
+
+        a{
+            text-decoration: none;
+            margin: 15px;
+            color: map-get($estilos, color2);
+            font-size: 16px;
+        }
     }
-    .navPages ul{
-        list-style: none;
-        margin: 0px;
-        padding: 5px;
-        text-align: center;
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
-    }
-    .navPages ul li{
-        display: inline-block;
-        border-right: 2px solid rgb(255, 255, 255);
-    }
-    .navPages ul li a{
-        text-decoration: none;
-        margin: 15px;
-        color: rgb(255, 255, 255);
-        font-size: 16px;
-    }
+    
     .navCatalogo{
         display: none;
     }
@@ -353,9 +361,9 @@ h2{
         position: absolute;
         top: 60px;
         right: 10px;
-    }
-    .redesSociales--catalogo i{
-        padding: 10px;
+        i{
+            padding: 10px;
+        }
     }
     #grid__catalogo img{
         height: calc(100vh - 100px);
@@ -371,19 +379,21 @@ h2{
     }
     .redesSociales--catalogo{
         top: 90px;
+        i:hover{
+            transform: scale(1.3);
+        }
     }
-    .redesSociales--catalogo i:hover{
-        transform: scale(1.3);
-    }
+    
     #grid__catalogo{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 300px);
+        img{
+            height: calc(100vh - 180px);
+            width: 100%;
+        }
     }
-    #grid__catalogo img{
-        height: calc(100vh - 180px);
-        width: 100%;
-    }
+    
 }
 @media screen and (min-width: 992px){
     
@@ -392,13 +402,13 @@ h2{
         margin-top: 0;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 150px);
+        img{
+            height: 100%;
+        }
     }
     .hotsale{
         grid-column: 1/3;
         grid-row: 1/3;
-    }
-    #grid__catalogo img{
-        height: 100%;
     }
     .pijama{
         grid-column: 4/5;
@@ -416,10 +426,16 @@ h2{
 
 /*CLUB 6AM*/
 .card{
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
+    a{
+        display: block;
+        margin: auto;
+    }
 }
 .clubInfo p{
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
+    text-align: center;
+    line-height: 30px;
 }
 .redesSociales__pages{
     @extend .redesSociales;
@@ -427,48 +443,18 @@ h2{
     top: 90px;
     right: 20px;
 }
+h3{
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    color: map-get($estilos, color2);
+}
 
-.navC ul{
-    list-style: none;
-    margin: 0px;
-    padding: 5px;
-    text-align: right;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-}
-.navC ul li{
-    display: inline-block;
-    border-right: 2px solid rgb(255, 255, 255);
-}
-.navC ul li a{
-    text-decoration: none;
-    margin: 15px;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-}
 .portadaClub{
     width: 100vw;
     height: calc(100vh - 130px);
     background-image: url(../image/comunidad.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
-h3{
-    padding: 20px 0px 20px 0px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-.clubInfo p{
-    text-align: center;
-    line-height: 30px;
-}
-.subtittle__club{
-    text-align: center;
-    padding: 10px 0px 10px 0px;
-}
-.card a{
-    display: block;
-    margin: auto;
 }
 
 $coloresboton: (
@@ -484,12 +470,11 @@ $coloresboton: (
     }
 }
 
-.testimonios video{
-    width: 100%;
-}
 .testimonios_contenedor{
-
     margin-bottom: 30px;
+    video{
+        width: 100%;
+    }
 }
 /*MEDIA QUERIS CLUB*/
 @media screen and (min-width: 480px){
@@ -501,15 +486,6 @@ $coloresboton: (
 @media screen and (max-width: 600px){
     .redesSociales__pages{
         display: none;
-    }
-    .navC{
-        display: none;
-    }
-
-}
-@media screen and (max-width: 900px){
-    .navC ul{
-        text-align: center;
     }
 }
 @media screen and (min-width: 900px){
@@ -524,7 +500,7 @@ $coloresboton: (
 h2{
     text-align: center;
     font-size: 60px;
-    color: rgb(255, 255, 255);
+    color: map-get($estilos, color2);
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 0;
@@ -541,24 +517,25 @@ h2{
     background-image: linear-gradient(rgba(247, 243, 243, 0.3), rgba(247, 243, 243, 0.3)), url(../image/pexels-ketut-subiyanto-4545160.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    p{
+        color: map-get($estilos, color);
+        text-align: center;
+        line-height: 25px;
+        padding: 10px;
+    }
 }
-.sobreNosotros p{
-    color: map-get($estilos, color);
-    text-align: center;
-    line-height: 25px;
-    padding: 10px;
-}
-
-.historia img{
-    width: 100%;
-}
-.historia p{
-    color: map-get($estilos, color);
-    text-align: center;
-}
-.historia__pasos{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.historia{
+    img{
+        width: 100%;
+    }
+    p{
+        color: map-get($estilos, color);
+        text-align: center;
+    }
+    .historia__pasos{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 /*MEDIA QUEIRIS SOBRE NOSOTROS*/
@@ -587,9 +564,9 @@ h2{
 @media screen and (min-width: 992px){
     .sobreNosotros{
         height: calc(100vh - 5px);
-    }
-    .sobreNosotros p{
-        line-height: 60px;
+        p{
+            line-height: 60px;
+        }
     }
     .historia p{
         margin-top: 20px;
@@ -607,7 +584,7 @@ h2{
     }
 }
 
-/*CONTACOT*/
+/*CONTACTO*/
 
 .enviar{
     display: block;
@@ -615,14 +592,21 @@ h2{
     text-align: center;
     padding: 10px;
     width: 200px;
-    
 }
-form div{
-    padding: 10px;
-    color: rgb(255, 255, 255);
-}
+
 .formulario{
     margin-bottom: 20px;
+    div{
+        padding: 10px;
+        color: map-get($estilos, color2);
+    }
+    .check{
+        text-align: center;
+    }
+    .boton{
+        position: relative;
+        bottom: 20px;
+    }
 }
 
 /*MEDIA QUERIS CONTACTO*/
