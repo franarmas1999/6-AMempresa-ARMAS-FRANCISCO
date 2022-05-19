@@ -6,7 +6,8 @@
 
 $estilos: (
     color: rgb(0,0,0),
-    color2: rgb(255, 255, 255)
+    color2: rgb(255, 255, 255),
+    color3: #00C9C8,
 );
 $fuente: 'Montserrat', sans-serif;
 
@@ -70,7 +71,23 @@ h4{
 }
 
 /*FOOTER SITIO WEB UTILIZANDO FLEXBOX*/ 
+.footer{
+    border-bottom: solid 2px map-get($estilos, color2);
+    h4{
+        font-family: $fuente;
+        background-color: map-get($estilos, color);
+        color: #00C9C8;
+        padding: 15px 0px 0px 20px;        
+        font-size: 30px;
+        font-weight: 200;
+    span{
+            font-size: 20px
+        }
+    }
+}
+
 footer{
+    font-family: $fuente;
     text-align: center;
     background-color: map-get($estilos, color);
     color: map-get($estilos, color2);
@@ -78,15 +95,39 @@ footer{
     div{
         padding: 15px;
     }
+    p{
+        color: rgb(190, 183, 183);
+        a{
+            text-decoration: none;
+            color: rgb(190, 183, 183);
+        }
+        a:hover{
+            color: map-get($estilos, color2)
+        }
+    }
+    .links{
+        text-decoration: underline;
+        color: #00C9C8;
+        a{
+            color: #00C9C8;
+        }
+    }
+}
+
+.footer__left{
+    i{
+        color: rgb(240, 116, 15);
+        margin-left: 10px;
+    }
 }
 
 .footer__center{
     border-top: solid 2px map-get($estilos, color2);
     border-bottom: solid 2px map-get($estilos, color2);
-
-    i{
-        color: rgb(240, 116, 15);
-        margin-left: 10px;
+}
+.footer__right{
+    span{
+        color: #00C9C8;
     }
 }
 
@@ -99,7 +140,16 @@ footer{
     background-color: rgb(39, 223, 14);
     margin-left: 10px;
 }
-
+.footer--epigrafe{
+    text-align: center;
+    font-size: 12px;
+    font-family: $fuente;
+    background-color: map-get($estilos, color);
+    color: map-get($estilos, color2);
+    p{
+        margin: 0;
+    }
+}
 
 /*MEDIA QUERIS INDEX*/
 @media screen and (max-width: 576px){
@@ -128,13 +178,13 @@ footer{
         ul li{
             display: inline-block;
             margin: -3px;
-            border-right: solid 1px map-get($estilos, color2);;
+            border-right: solid 2px map-get($estilos, color2);
             padding: 10px;
         }
 
         ul li a{
             text-decoration: none;
-            color: rgb(255, 255, 255);
+            color: map-get($estilos, color2);
             font-size: 12px;
             display: block;
             padding: 0px;
@@ -165,7 +215,17 @@ footer{
         height: calc(100vh - 120px);
         
     }
-    
+    .footer{
+        h4{
+            text-align: left;
+        }
+    }
+    .footer__center{
+        p{
+            margin: auto;
+            width: 300px;
+        }
+    }
 }
 @media screen and (min-width: 768px){
     h1{
@@ -180,20 +240,18 @@ footer{
         justify-content: space-around;
     }
     .footer__center{
-        flex-grow: 3;
+        flex-grow: 1;
         border-bottom: none;
         border-top: none;
-        border-left: solid 2px map-get($estilos, color2);
-        border-right: solid 2px map-get($estilos, color2);
     }
     .footer__left{
-        flex-grow: 2;
+        flex-grow: 1;
     }
     .footer__right{
-        flex-grow: 2;
+        flex-grow: 1;
     }
-
 }
+
 @media screen and (min-width: 992px){
     h1{
         font-size: 110px;
@@ -427,10 +485,15 @@ h2{
 /*CLUB 6AM*/
 .card{
     color: map-get($estilos, color2);
+    border-radius: 0px;
+    padding: 10px;
     a{
         display: block;
         margin: auto;
     }
+}
+.subtittle__beneficios{
+    margin-bottom: 0px;
 }
 .clubInfo p{
     color: map-get($estilos, color2);
@@ -443,12 +506,13 @@ h2{
     top: 90px;
     right: 20px;
 }
+
 h3{
     padding: 20px 0px 20px 0px;
     text-align: center;
     color: map-get($estilos, color2);
+    background-color: map-get($estilos, color);
 }
-
 .portadaClub{
     width: 100vw;
     height: calc(100vh - 130px);
@@ -483,6 +547,7 @@ $coloresboton: (
     margin-right: 20px;
     }
 }
+
 @media screen and (max-width: 600px){
     .redesSociales__pages{
         display: none;
@@ -498,6 +563,7 @@ $coloresboton: (
 
 /*SOBRE NOSOTROS*/
 h2{
+    background-color: map-get($estilos, color );
     text-align: center;
     font-size: 60px;
     color: map-get($estilos, color2);
@@ -584,34 +650,132 @@ h2{
     }
 }
 
+
 /*CONTACTO*/
-
-.enviar{
-    display: block;
-    margin: auto;
+form{
     text-align: center;
-    padding: 10px;
-    width: 200px;
-}
-
-.formulario{
-    margin-bottom: 20px;
     div{
-        padding: 10px;
-        color: map-get($estilos, color2);
+        margin: 10px;
     }
-    .check{
-        text-align: center;
+    .bottom{
+        input{
+            color: map-get($estilos, color2);
+            background-color: rgb(255, 0, 0);
+            padding:  10px 15px;
+            border: solid 2px map-get($estilos, color);
+            border-radius: 4px;
+        }
+        
     }
-    .boton{
-        position: relative;
-        bottom: 20px;
+    p{
+        margin-bottom: 0px;
+    }
+    textarea{
+        width: calc(100% - 20px);
     }
 }
-
-/*MEDIA QUERIS CONTACTO*/
+@media screen and (min-width: 576px){
+    
+    form{
+        .id, .numeroId{
+            display: inline-block;
+        }
+        .nombreApellido{
+            input{
+                width: 300px;
+            }
+        }
+        .email{
+            input{
+                width: 400px;
+            }
+        }
+        .telefono{
+            input{
+                width: 380px;
+            }
+        }
+        textarea{
+            width: 450px;
+        }
+        .bottom{
+            input{
+                padding: 10px 30px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 840px){
+    form{
+        margin: 10px;
+        .nombreApellido{
+            input{
+                width: 400px;
+            }
+        }
+        .email{
+            input{
+                width: 500px;
+            }
+        }
+        .telefono{
+            input{
+                width: 480px;
+            }
+        }
+        .numeroId{
+            input{
+                width: 300px;
+            }
+        }
+        textarea{
+            width: 550px;
+        }
+        .bottom{
+            input{
+                padding: 10px 40px;
+            }
+        }
+    }
+}
 @media screen and (min-width: 992px){
-    .formulario{
-        width: 800px;
+    #form{
+        margin: auto;
+        margin-bottom: 40px;
+        border: solid 2px black;
+        width: 880px;
+    }
+    form{
+        div{
+            padding: 5px;
+        }
+        .nombreApellido{
+            input{
+                width: 600px;
+            }
+        }
+        .email{
+            input{
+                width: 700px;
+            }
+        }
+        .telefono{
+            input{
+                width: 680px;
+            }
+        }
+        .numeroId{
+            input{
+                width: 500px;
+            }
+        }
+        textarea{
+            width: 740px;
+        }
+        .bottom{
+            input{
+                padding: 15px 50px;
+            }
+        }
     }
 }

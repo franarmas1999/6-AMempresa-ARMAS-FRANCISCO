@@ -66,7 +66,25 @@ h4 {
 }
 
 /*FOOTER SITIO WEB UTILIZANDO FLEXBOX*/
+.footer {
+  border-bottom: solid 2px white;
+}
+
+.footer h4 {
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  color: #00C9C8;
+  padding: 15px 0px 0px 20px;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.footer h4 span {
+  font-size: 20px;
+}
+
 footer {
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   background-color: black;
   color: white;
@@ -76,14 +94,40 @@ footer div {
   padding: 15px;
 }
 
+footer p {
+  color: #beb7b7;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #beb7b7;
+}
+
+footer p a:hover {
+  color: white;
+}
+
+footer .links {
+  text-decoration: underline;
+  color: #00C9C8;
+}
+
+footer .links a {
+  color: #00C9C8;
+}
+
+.footer__left i {
+  color: #f0740f;
+  margin-left: 10px;
+}
+
 .footer__center {
   border-top: solid 2px white;
   border-bottom: solid 2px white;
 }
 
-.footer__center i {
-  color: #f0740f;
-  margin-left: 10px;
+.footer__right span {
+  color: #00C9C8;
 }
 
 .fa-envelope {
@@ -95,6 +139,18 @@ footer div {
   border-radius: 15px;
   background-color: #27df0e;
   margin-left: 10px;
+}
+
+.footer--epigrafe {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.footer--epigrafe p {
+  margin: 0;
 }
 
 /*MEDIA QUERIS INDEX*/
@@ -125,7 +181,7 @@ footer div {
   .navbarIndex ul li {
     display: inline-block;
     margin: -3px;
-    border-right: solid 1px white;
+    border-right: solid 2px white;
     padding: 10px;
   }
   .navbarIndex ul li a {
@@ -156,6 +212,13 @@ footer div {
   .carousel-item img {
     height: calc(100vh - 120px);
   }
+  .footer h4 {
+    text-align: left;
+  }
+  .footer__center p {
+    margin: auto;
+    width: 300px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -174,23 +237,21 @@ footer div {
         justify-content: space-around;
   }
   .footer__center {
-    -webkit-box-flex: 3;
-        -ms-flex-positive: 3;
-            flex-grow: 3;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     border-bottom: none;
     border-top: none;
-    border-left: solid 2px white;
-    border-right: solid 2px white;
   }
   .footer__left {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .footer__right {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 
@@ -465,11 +526,17 @@ h2 {
 /*CLUB 6AM*/
 .card {
   color: white;
+  border-radius: 0px;
+  padding: 10px;
 }
 
 .card a {
   display: block;
   margin: auto;
+}
+
+.subtittle__beneficios {
+  margin-bottom: 0px;
 }
 
 .clubInfo p {
@@ -488,6 +555,7 @@ h3 {
   padding: 20px 0px 20px 0px;
   text-align: center;
   color: white;
+  background-color: black;
 }
 
 .portadaClub {
@@ -549,6 +617,7 @@ h3 {
 
 /*SOBRE NOSOTROS*/
 h2 {
+  background-color: black;
   text-align: center;
   font-size: 60px;
   color: white;
@@ -643,36 +712,102 @@ h2 {
 }
 
 /*CONTACTO*/
-.enviar {
-  display: block;
-  margin: auto;
+form {
   text-align: center;
-  padding: 10px;
-  width: 200px;
 }
 
-.formulario {
-  margin-bottom: 20px;
+form div {
+  margin: 10px;
 }
 
-.formulario div {
-  padding: 10px;
+form .bottom input {
   color: white;
+  background-color: red;
+  padding: 10px 15px;
+  border: solid 2px black;
+  border-radius: 4px;
 }
 
-.formulario .check {
-  text-align: center;
+form p {
+  margin-bottom: 0px;
 }
 
-.formulario .boton {
-  position: relative;
-  bottom: 20px;
+form textarea {
+  width: calc(100% - 20px);
 }
 
-/*MEDIA QUERIS CONTACTO*/
+@media screen and (min-width: 576px) {
+  form .id, form .numeroId {
+    display: inline-block;
+  }
+  form .nombreApellido input {
+    width: 300px;
+  }
+  form .email input {
+    width: 400px;
+  }
+  form .telefono input {
+    width: 380px;
+  }
+  form textarea {
+    width: 450px;
+  }
+  form .bottom input {
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  form {
+    margin: 10px;
+  }
+  form .nombreApellido input {
+    width: 400px;
+  }
+  form .email input {
+    width: 500px;
+  }
+  form .telefono input {
+    width: 480px;
+  }
+  form .numeroId input {
+    width: 300px;
+  }
+  form textarea {
+    width: 550px;
+  }
+  form .bottom input {
+    padding: 10px 40px;
+  }
+}
+
 @media screen and (min-width: 992px) {
-  .formulario {
-    width: 800px;
+  #form {
+    margin: auto;
+    margin-bottom: 40px;
+    border: solid 2px black;
+    width: 880px;
+  }
+  form div {
+    padding: 5px;
+  }
+  form .nombreApellido input {
+    width: 600px;
+  }
+  form .email input {
+    width: 700px;
+  }
+  form .telefono input {
+    width: 680px;
+  }
+  form .numeroId input {
+    width: 500px;
+  }
+  form textarea {
+    width: 740px;
+  }
+  form .bottom input {
+    padding: 15px 50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -7,6 +7,9 @@
     <title>Atencion al Cliente 6:AM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../sass/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/18ad58d6a4.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../image/favicom.jpg" type="image/x-icon">
     <meta name="description" content="Pagina de Contacto de la empresa y fundacion 6:AM. Aqui podras comunicarte con nuestros asesores por cualquier inquietud o pregunta que tengas. Podras comunicarte cualquier dia y a cualquier hora. El tiempo de respuesta es de 48hs">
@@ -14,7 +17,7 @@
 </head>
 <body>
     <header>
-        <nav class="bg-dark navPages">
+        <nav class="navPages">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./catalogo.html">Catalogo</a></li>
@@ -22,61 +25,77 @@
                 <li><a href="./club6am.html">Club 6:AM</a></li>
             </ul>
         </nav>
-        <h2 class="bg-dark tittle__pages">CONTACTO</h2>
-        <div class="redesSociales__pages bg-dark">
+        <h2 class="tittle__pages">CONTACTO</h2>
+        <div class="redesSociales__pages">
             <i class="fa-brands fa-facebook-square"></i><i class="fa-brands fa-instagram-square"></i><i class="fa-brands fa-twitter-square"></i>
         </div>
     </header>
 
-    <article class="container formulario bg-dark">
-        <form action="/action_page.php">
-            <div class="mb-3 mt-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    <form action="enviar.php" method="post" enctype="text/plain">
+        <fieldset id="form">
+            <div class="nombreApellido">
+                <label for="nombre"></label>
+                Nombre y Apellido: <input type="name" name="nombre" id="name-lastname">
+            </div> 
+            <div class="id">
+                <label for="Identificacion"></label>
+                    ID: <select name="Identificacion">
+                    <option value="DNI">DNI</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Cedula">Cedula</option>
+                    </select>
             </div>
-            <div class="mb-3">
-            <label for="pwd" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            <div class="numeroId">
+                <label for="numero-id"></label>
+                Numero ID: <input type="name" name="numero-id">
             </div>
-            <div class="mb-3 mt-3">
-                <label for="dni" class="form-label">DNI:</label>
-                <input type="email" class="form-control" id="dni" placeholder="Enter DNI" name="dni">
-                </div>
-            <div class="form-check mb-3">
-            <div>
-                <label for="comment">Comments:</label>
-                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+            <div class="email">
+                <label for="email"></label>
+                Email:<input type="email" name="email">
             </div>
-            <div class="check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                </label>
+            <div class="telefono">
+                <label for="telefono"></label>
+                Telefono:<input type="number" name="telefono">
             </div>
+            <div class="text__area">
+                <p id="text-comentario">Comentario:</p>
+                <label for="comentario"></label>
+                <textarea  placeholder="Comentario"></textarea>
             </div>
-            <div class="boton">
-                <button type="submit" class="btn btn-primary enviar">Submit</button>
+            <div class="bottom">
+                <label for="bottom"></label>
+                <input class="bottom__submit" type="submit" name="enviar" value="ENVIAR">
             </div>
-            
-        </form>
-        
+        </fieldset>
+    </form>
+    <article class="footer">
+        <h4 class="subtittle--footer">6:AM <span>informacion</span></h4>
     </article>
-
     <footer>
         <div class="footer__left">
-            <h5><u>Paginas Relacionadas</u></h5>
-            <p>lacasadelcolchon.com.ar <br> club6amempresa.com.ar <br> almohadaplus.com.ar</p>
+            <h5>Visitanos, estamos en:</h5>
+            <p>Av.Velez Sarsfiel 85<i class="fa-solid fa-location-dot map"></i><br>
+            Av. Valparaiso 2002<i class="fa-solid fa-location-dot map"></i></p>
+            <h5 class="subtittle--paginasRelacionadas">Paginas Relacionadas</h5>
+            <p class="links"><a href="#">http//.elmundodelcolchon.com</a><br><a href="#">hhtp//.todosabanas.com</a><br><a href="#">http//.almohadasysueños.com</a></p>
         </div>
         <div class="footer__center">
-            <h5><u>Ubicacion</u></h5>
-            Av.Velez Sarsfiel 85<i class="fa-solid fa-location-dot map"></i><br>
-            Av. Valparaiso 2002<i class="fa-solid fa-location-dot map"></i>
+            <h5>Sumate a nuestro esquipo</h5>
+            <p>Iniciá tu negocio o suma nuestra linea completa  de sábanas, frazadas, acolchados, toallas y toallones, almohadas, cortinas y mucho mas, con el respaldo de una empresa líder en Ropa de Cama!<br>¡TE ESTAMOS ESPERANDO!</p>
         </div>
         <div class="footer__right">
-            <h5><u>Contacto</u></h5>
-            0351-5488753<i class="fa-brands fa-whatsapp"></i><br>
-            atencionCliente@6:am.com<i class="fa-solid fa-envelope mail"></i>
+            <h5>Contactanos:</h5>
+            <p>0351-5488753<i class="fa-brands fa-whatsapp"></i><br>
+            atencionCliente@6:am.com<i class="fa-solid fa-envelope mail"></i></p>
+            <h5 class="subtittle--paginasRelacionadas"><span>Club 6:AM</span></h5>
+            <p><a href="#">Iniciar Sesion</a><br> <a href="#">Configurar mi cuenta</a><br><a href="#">Registrarme</a></p>
         </div>
     </footer>
+    <div class="footer--epigrafe">
+        <p>EMPRESA 6:AM 2022 CREATED BY ARMASDESIGN</p>
+    </div>
+
+
 
 
 
