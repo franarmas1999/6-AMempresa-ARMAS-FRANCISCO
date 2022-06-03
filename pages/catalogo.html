@@ -73,42 +73,115 @@
     </section>
     <section id="grid__catalogo">
         <div class="grid__catalogo--hijos hotsale">
-            <img src="../image/hotsale.jpg" alt="">
+            <img src="../image/chicasentada-min.jpg" alt="">
             <div class="text__imagen">Hot-Sale</div>
         </div>
         <div class="grid__catalogo--hijos bata">
-            <img src="../image/bata.jpg" alt="">
+            <img src="../image/bata-min.jpg" alt="">
             <div class="text__imagen">Batas</div>
         </div>
         <div class="grid__catalogo--hijos colchones">
-            <img src="../image/colchon.jpg" alt="">
+            <img src="../image/colchon-min.jpg" alt="">
             <div class="text__imagen">Colchones</div>
         </div>
         <div class="grid__catalogo--hijos cubrecama">
-            <img src="../image/cubrecama.jpg" alt="">
+            <img src="../image/cubrecama-min.jpg" alt="">
             <div class="text__imagen">Cubrecama</div>
         </div>
         <div class="grid__catalogo--hijos almohadas">
-            <img src="../image/almohadas.jpg" alt="">
+            <img src="../image/chicaconalmohada-min.jpg" alt="">
             <div class="text__imagen">Almohadas</div>
         </div>
         <div class="grid__catalogo--hijos pijama">
-            <img src="../image/pijama.jpg" alt="">
+            <img src="../image/chicaspijama-min.jpg" alt="">
             <div class="text__imagen">Pijamas</div>
         </div>
         <div class="grid__catalogo--hijos toallas">
-            <img src="../image/toallas.jpg" alt="">
+            <img src="../image/toalla-min.jpg" alt="">
             <div class="text__imagen">Toallas</div>
         </div>
-        <div class="grid__catalogo--hijos accesorios">
-            <img src="../image/accesroios.jpg" alt="">
-            <div class="text__imagen">Accesorios</div>
-        </div>
         <div class="grid__catalogo--hijos pantuflas">
-            <img src="../image/pantuflas.jpg" alt="">
+            <img src="../image/pantuflas2-min.jpg" alt="">
             <div class="text__imagen">Pantuflas</div>
         </div>
+        <div class="grid__catalogo--hijos accesorios">
+            <img src="../image/accesorios-min.jpg" alt="">
+            <div class="text__imagen">Accesorios</div>
+        </div>
     </section>
+
+    <article class="flex__pago">
+        <div class="flex__pago--izq">
+            <p class="pago--subtittle">METODOS DE PAGO</p>
+            <img src="../image/pago.png" alt="">
+            <div class="pago--text">
+                <p>En 6:AM nos tomamos muy en serio tu seguridad a la hora de realizar un pago, por esta razon todas las operaciones de compra estan bajo la proteccion que ofrece PayPal.</p>
+            </div>
+        </div>
+        <div class="flex__pago--der">
+            <p class="pago--subtittle">TU ENVIO:</p>
+            <form action="enviar.php" method="post" enctype="text/plain">
+                <fieldset id="pago--form">
+                    <div>
+                        <label for="pais"></label>
+                    <select name="pais">
+                        <option  value="nada">Selecciona un Pais</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Cedula">Chile</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="prov"></label>
+                    <select name="prov">
+                        <option  value="nada">Selecciona tu Provincia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="codigo"></label>
+                        <input placeholder="Codigo Postal" type="name" name="numero-id">
+                    </div>
+                    <div>
+                        <label for="bottom"></label>
+                        <input class="bottom__submit" type="submit" name="enviar" value="CALCULAR ENVIO">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </article>
+    <h3 class="catalogo__subt">¿COMO TRABAJAMOS?</h3>
+    <article id="grid__envios">
+        <div class="grid__envios--hijos">
+            <div class="envios--icon">
+                <i class="fa-solid fa-1"></i>
+            </div>
+            <h4>Preparacion</h4>
+            <p>Una vez realizada la compra, empezamos la tarea de seleccion y separacion del producto. En caso de ser un producto personalizado, nuestros diseñadores trabajaran en conjunto con el taller de fabricacion para asegurarse de un correcto desarrollo.<br>A continuacion procedemos con la etapa de empaquetamiento, donde cumplimos todas las medidas necesarias para que el producto llegue en optimas condiciones</p>
+            <div class="envios--img">
+                <img src="../image/paquete.png" alt="">
+            </div>
+        </div>
+        <div class="grid__envios--hijos">
+            <div class="envios--icon">
+                <i class="fa-solid fa-2"></i>
+            </div>
+            <h4>Envio</h4>
+            <p>Terminado el empaquetamiento, enviamos los productos mediante el sistema de mensajeria FeDex, el tiempo de llegada va a depender del tipo de compra. El plazo maximo es de 7 dias habiles, pasado este tiempo el envio correara a costas del cadete. <br>Al registar el paquete, este recibe un numero de envio, el cual se lo enviaremos via mail para que pueda conocer el estado del mismo, y asi saber el dia exacto de su llegada</p>
+            <div class="envios--img">
+                <img src="../image/trans.png" alt="">
+            </div>
+        </div>
+        <div class="grid__envios--hijos">
+            <div class="envios--icon">
+                <i class="fa-solid fa-3"></i>
+            </div>
+            <h4>Entrega</h4>
+            <p>Al recibir su paquete, podra observar el estado del mismo, estara cerrado y protegido por una de nuestras cajas, en caso de no ser asi, o de daños notorios, se recomienda dejar constancia al cadete de la situacion. Todos nuestros productos tienen garantia de 6 meses. Por ultimo, lo invitamos a responder la siguiente <a href="#">encuesta</a> para valorar nuestro servicio y asi poder seguir mejorando para usted. Gracias.</p>
+            <div class="envios--img">
+                <img src="../image/entrega2.png" alt="">
+            </div>
+        </div>
+    </article>
 
     <article class="footer">
         <h4 class="subtittle--footer">6:AM <span>informacion</span></h4>

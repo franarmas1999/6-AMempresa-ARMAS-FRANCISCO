@@ -8,6 +8,7 @@ $estilos: (
     color: rgb(0,0,0),
     color2: rgb(255, 255, 255),
     color3: #00C9C8,
+    color4: #d9d9e0,
 );
 $fuente: 'Montserrat', sans-serif;
 
@@ -279,14 +280,15 @@ footer{
 
 /*CATALOGO**/
 .bodyCatalogo{
-    background-color: map-get($estilos, color);
+    background-color: map-get($estilos, color)
 }
 
 /*ANIMACION TEXTO ENVIO*/
 .envios{
-    background-color: rgb(243, 6, 6);
+    background-color: map-get($estilos, color3 );
     padding: 0px;
     text-align: center;
+    font-family: $fuente;
 
     p{
         font-weight: 1000;
@@ -340,7 +342,7 @@ h2{
 
     img:hover{
         background: #F5A9A9;
-        animation: 1s chicle 1;
+        /*animation: 1s chicle 1;*/
     }
     div{
         position: absolute;
@@ -355,7 +357,93 @@ h2{
     }
 }
 
-@keyframes chicle{
+.flex__pago{
+    background-color: #d9d9e0;
+    .pago--subtittle{
+        @extend .envios;
+        font-size: 20px;
+        padding: 10px;
+        color: map-get($estilos, color2);
+        font-weight: bold;
+        margin-top: 0px;
+    }
+    p{
+        color: map-get($estilos, color);
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+    }
+    img{
+        width: 100vw;
+    }
+    form{
+        font-family: $fuente;
+        div{
+            padding: 5px;
+        }
+        select{
+            width: 230px;
+            background-color: #d9d9e0;;
+            color: map-get($estilos, color);
+            border: solid 2px map-get($estilos, color);
+        }
+        input{
+            @extend select;
+        }
+        .bottom__submit{
+            border: map-get($estilos, color3);
+            background-color: map-get($estilos, color3);
+            color: map-get($estilos, color2);
+            padding: 10px;
+        }
+        .bottom__submit:hover{
+            background-color: #108383
+        }
+    }
+}
+.catalogo__subt{
+    @extend .envios;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    font-size: 20px;
+    margin: 0px;
+}
+#grid__envios{
+    background-color: #d9d9e0;;
+    text-align: center;
+    color: map-get($estilos, color);
+    .envios--icon{
+        width: 70px;
+        height: 70px;
+        background-color: #00C9C8;
+        border-radius: 50px;
+        text-align: center;
+        margin: auto;
+        i{
+            text-align: center;
+            font-size: 40px;
+            color: map-get($estilos, color2);
+            position: relative;
+            top: 15px;
+        }
+    }
+    h4{
+        background-color: #d9d9e0;
+        color: map-get($estilos, color3);
+        font-size: 20px;
+        border: none;
+    }
+}
+.envios--img{
+    img{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/*@keyframes chicle{
     30%{
         -webkit-transform: 
             scaleX(1.25)
@@ -371,7 +459,7 @@ h2{
             scaleX(1.15)
             scaleY(0.85);
     }
-}
+}*/
 
 
 /*MEDIA QUEIRS CATALOGO*/
@@ -427,6 +515,12 @@ h2{
         height: calc(100vh - 100px);
         width: 100%;
     }
+    .envios--img{
+        img{
+            width: 180px;
+            margin-bottom: 30px;
+        }
+    }
 }
 @media screen and (min-width: 768px){
     .navPages ul{
@@ -445,39 +539,59 @@ h2{
     #grid__catalogo{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 300px);
         img{
-            height: calc(100vh - 180px);
+            height: 300px;
             width: 100%;
+        }
+    }
+    .flex__pago{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        .flex__pago--izq{
+            flex-basis: 100%;
+            img{
+                width: 100%;
+                margin-left: 20px;
+            }
+            .pago--text{
+                margin-left: 20px;
+            }
+        }
+        .flex__pago--der{
+            flex-basis: 100%;
         }
     }
     
 }
+@media screen and (min-width: 900px){
+    #grid__envios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        padding: 10px;
+    }
+}
 @media screen and (min-width: 992px){
-    
     #grid__catalogo{
         margin: 20px;
-        margin-top: 0;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 150px);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
         img{
-            height: 100%;
+            height: 400px;
         }
     }
-    .hotsale{
-        grid-column: 1/3;
-        grid-row: 1/3;
-    }
-    .pijama{
-        grid-column: 4/5;
-        grid-row: 2/4;
-    }
-    .accesorios{
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
-    .colchones{
-        grid-column: 4/6;
+}
+@media screen and (min-width: 1200px){
+    .flex__pago{
+        .flex__pago--der{
+            flex-basis: 900px;
+        }
+        .flex__pago--izq{
+            img{
+                width: 500px;
+            }
+        }
     }
 }
 
@@ -511,7 +625,7 @@ h3{
     padding: 20px 0px 20px 0px;
     text-align: center;
     color: map-get($estilos, color2);
-    background-color: map-get($estilos, color);
+    background-color: map-get($estilos, color3);
 }
 .portadaClub{
     width: 100vw;
@@ -562,6 +676,7 @@ $coloresboton: (
 
 
 /*SOBRE NOSOTROS*/
+
 h2{
     background-color: map-get($estilos, color );
     text-align: center;
@@ -570,6 +685,9 @@ h2{
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 0;
+}
+.subtittle--left{
+    margin-top: -20px;
 }
 .redesSociales__sN{
     @extend .redesSociales;
@@ -580,46 +698,169 @@ h2{
 
 .sobreNosotros{
     height: 100vw;
-    background-image: linear-gradient(rgba(247, 243, 243, 0.3), rgba(247, 243, 243, 0.3)), url(../image/pexels-ketut-subiyanto-4545160.jpg);
+    background-image: url(../image/futuro-min.jpg);
+    background-color: rgb(75, 73, 73);
+    background-blend-mode: soft-light ;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     p{
-        color: map-get($estilos, color);
+        font-size: 16px;
+        color: map-get($estilos, color2);
         text-align: center;
         line-height: 25px;
         padding: 10px;
+        font-family: $fuente;
+        span{
+            display: none;
+        }
     }
 }
 .historia{
+    background-color: map-get($estilos, color4);
     img{
         width: 100%;
     }
     p{
         color: map-get($estilos, color);
         text-align: center;
+        padding: 10px;
     }
     .historia__pasos{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
+.aliados__grid{
+    margin-top: -10px;
+    padding: 10px;
+    background-color: map-get($estilos, color4);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    img{
+        width: 100%;
+    }
+    p{
+        display: none;
+    }
+}
+.miembros__grid{
+    background-color: map-get($estilos, color4 );
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: -10px;
+    padding-top: 20px;
+    img{
+        border-radius: 50%;
+        border: solid 4px map-get($estilos, color3);
+        width: 200px;
+        height: 200px;
+    }
+    p{
+        font-family: $fuente;
+        padding: 10px;
+        span{
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+}
+
+
 /*MEDIA QUEIRIS SOBRE NOSOTROS*/
+@media screen and (min-width: 400px){
+    .sobreNosotros{
+        p{
+            span{
+                display: block;
+                font-family: 'Raleway', sans-serif;
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+    }
+}
 @media screen and (min-width: 480px){
     .sobreNosotros p{
         padding: 30px;
-        font-size: 20px;
-        line-height: 35px;
+        font-size: 16px;
+        line-height: 30px;
     }
 }
 @media screen and (min-width: 600px){
-    .sobreNosotros p{
-        padding: 30px;
-        font-size: 30px;
-        line-height: 40px;
-    }
+    .sobreNosotros{
+        p{
+            padding: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            span{
+                font-size: 60px;
+                line-height: 60px;
+            }
+        }
+    } 
     .historia p{
         font-size: 20px;
+    }
+    .aliados__grid{
+        grid-gap: 30px;
+    }
+    .miembros__grid{
+        p{
+            margin: auto;
+            width: 350px;
+        }
+    }
+}
+@media screen and (min-width: 700px){
+    .sobreNosotros{
+        p{
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    .aliados__grid{
+        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        img{
+            width: 200px;
+        }
+        p{
+            font-family: $fuente;
+            font-size: 16px;
+            display: block;
+            padding: 10px;
+        }
+    }
+}
+@media screen and (min-width: 800px){
+    .sobreNosotros{
+        p{
+            line-height: 50px;
+            span{
+                line-height: 70px;
+            }
+        }
+    }
+    .miembros__grid{
+        grid-template-columns: repeat(2, 1fr);
+        .hijo3{
+            position: relative;
+            left: 180px;
+        }
+    }
+    
+}
+@media screen and (min-width: 900px){
+    .miembros__grid{
+        grid-template-columns: repeat(2, 1fr);
+        .hijo3{
+            position: relative;
+            left: 200px;
+        }
     }
 }
 @media screen and (max-width: 900px){
@@ -629,25 +870,71 @@ h2{
 }
 @media screen and (min-width: 992px){
     .sobreNosotros{
-        height: calc(100vh - 5px);
+        height: 100vh;
         p{
-            line-height: 60px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .historia{
+        p{
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        img{
+            margin-top: 20px;
+        }
+    }
+    .miembros__grid{
+        grid-template-columns: repeat(3, 1fr);
+        p{
+            width: 300px;
+        }
+        .hijo3{
+            position: relative;
+            left: 0px;
+        }
+        }
+    .subtittle--left{
+        text-align: left;
+        padding-left: 150px;
+    }
+    .subtittle--right{
+        text-align: right;
+        padding-right: 150px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .sobreNosotros {
+        p{
+            line-height: 40px;
+            font-size: 30px;
+            span{
+                font-size: 70px;
+                line-height: 80px;
+            }
         }
     }
     .historia p{
-        margin-top: 20px;
-    }
-}
-@media screen and (min-width: 1300px){
-    .sobreNosotros p{
-        line-height: 80px;
-        font-size: 40px;
-    }
-    .historia p{
-        line-height: 40px;
-        font-size: 25px;
+        line-height: 28px;
+        font-size: 18px;
         padding: 15px;
     }
+    .subtittle--left{
+        text-align: left;
+        padding-left: 220px;
+    }
+    .subtittle--right{
+        text-align: right;
+        padding-right: 220px;
+    }
+    .aliados__grid--hijos{
+        margin: auto;
+        width: 400px;
+        text-align: center;
+    }
+    
 }
 
 
