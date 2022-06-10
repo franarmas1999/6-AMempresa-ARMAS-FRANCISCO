@@ -16,87 +16,196 @@
     <meta name="keywords" content="empresa, organizacion, ong, fundacion, medioambiente, agua, ropa blanca, sociedad, comunidad, inclusion, integridad, igualdad, proyectos, donaciones, club, 6:am">
 </head>
 <body>
-    <nav class="navPages">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./catalogo.html">Catalogo</a></li>
-            <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-    <h2 class="tittle__pages">CLUB 6:AM</h2>
-    <div class="redesSociales__pages">
-        <i class="fa-brands fa-facebook-square"></i><i class="fa-brands fa-instagram-square"></i><i class="fa-brands fa-twitter-square"></i>
-    </div>
-    <section class="portadaClub">
-        
+    <!--  ENCABEZADO   -->
+    <header>
+        <nav class="navPages">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./catalogo.html">Catalogo</a></li>
+                <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <h2 class="tittle__pages">CLUB 6:AM</h2>
+        <div class="redesSociales__pages">
+            <i class="fa-brands fa-facebook-square"></i><i class="fa-brands fa-instagram-square"></i><i class="fa-brands fa-twitter-square"></i>
+        </div>
+    </header>
+    <!--  CARRUSEL CLUB PORTADA   -->
+    <section class="carrusel">
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+        <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../image/gentesol-min.jpg" alt="" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="../image/union-min.jpg" alt="" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="../image/unionn-min.jpg" alt="" class="d-block w-100">
+                </div>
+            </div>
+        <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
     </section>
-    <article class="clubInfo bg-dark">
+    <!--  BREVE DESCRIPCION CLUB 6AM   -->
+    <article class="clubInfo">
         <h3>¿QUE ES CLUB 6:AM?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate illum, tempore nostrum suscipit necessitatibus enim exercitationem debitis atque optio animi. Reprehenderit veniam corrupti rem, alias libero dolorum molestias quis nesciunt.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint ratione suscipit repellat sequi unde accusantium doloremque fugiat excepturi dicta corporis! Aperiam deserunt distinctio fugit accusantium. Vel et saepe eveniet iure.</p>
-        <h4>UNETE A ESTA GRAN FAMILIA</h4>
+        <p>Es una Organizacion fundada y financiada por 6:AM. Con actividad en mas de 8 paises entre America Latina y Africa, la organizacion cuenta con mas de 400 miembros voluntarios. <br>Cuenta con la ayuda y apoyo de grandes ONGs como GREENPEACE Y UNICEF, ademas de colaborar codo a codo con fundaciones del area local para contar con mayor informacion a la hora de tomar desiciones y accion.</p>
+        <h4 class="subtittle--unete"><a href="#">UNETE A ESTA GRAN FAMILIA</a></h4>
     </article>
-
+    <!--  ONGS  -->
+    <article class="ong">
+        <div class="ong__flex izq">
+            <a href="#"><img src="../image/logo-Greenpeace.png" alt=""></a>
+        </div>
+        <div class="ong__flex der">
+            <a href="#"><img src="../image/1200px-UNICEF_Logo.png" alt=""></a>
+        </div>
+    </article>
+    <!--  PROYECTOS EMPRESA   -->
+    <h3 class="subtittle__beneficios">PROYECTOS</h3>
+    <article class="proyectos">
+        <div class="cardd">
+            <div class="face font">
+                <img src="../image/africa1.jpg" alt="">
+            </div>
+            <div class="face back">
+                <h4>PROYECTO PENSAR </h4>
+                <p><a href="#">Ver Mas</a></p>
+            </div>
+        </div>
+        <div class="cardd">
+            <div class="face font">
+                <img src="../image/escuela.jpg" alt="">
+            </div>
+            <div class="face back">
+                <h4>ESCUELA CONGO</h4>
+                <p><a href="#">Ver Mas</a></p>
+            </div>
+        </div>
+        <div class="cardd">
+            <div class="face font">
+                <img src="../image/agua1.jpg" alt="">
+            </div>
+            <div class="face back">
+                <h4>PROYECTO AGUA</h4>
+                <p><a href="#">Ver Mas</a></p>
+            </div>
+        </div>
+        <div class="cardd">
+            <div class="face font">
+                <img src="../image/hospital.jpg" alt="">
+            </div>
+            <div class="face back">
+                <h4>HOSPITAL AMAZONAS</h4>
+                <p><a href="#">Ver Mas</a></p>
+            </div>
+        </div>
+        <div class="cardd">
+            <div class="face font">
+                <img src="../image/arboles.jpg" alt="">
+            </div>
+            <div class="face back">
+                <h4>PROYECTO ADAM</h4>
+                <p><a href="#">Ver Mas</a></p>
+            </div>
+        </div>
+        <div class="cardd">
+            <div class="face font">
+                <img src="../image/residuos.jpg" alt="">
+            </div>
+            <div class="face back">
+                <h4>PROYECTO RENACER</h4>
+                <p><a href="#">Ver Mas</a></p>
+            </div>
+        </div>
+    </article>
+    <!--  TESTIMONIOS   -->
+    <h3>TESTIMONIOS</h3>
+    <article class="testimonios">
+        <div class="testimonios__hijos">
+            <video class="testimonios__items" controls poster="../image/roger.jpg">
+                <source src="../video/testimonio-video" type="video/mp4">
+            </video>
+        </div>
+        <div class="testimonios__hijos parrafo">
+            <p><span>ROGER FEDERER</span><br>Roger Federer es un tenista profesional suizo. Está considerado como el mejor tenista de toda la historia en pistas de hierba​​​ y uno de los mejores de todos los tiempos.</p>
+        </div>
+        <div class="testimonios__hijos parrafo">
+            <p><span>ANGELINA JOLIE</span><br>Actriz, cineasta y embajadora de buena voluntad estadounidense. A lo largo de su carrera, Jolie ha recibido varios reconocimientos por sus logros cinematográficos, entre ellos dos Premios Óscar, tres Globos de Oro y dos Premios del Sindicato de Actores.</p>
+        </div>
+        <div class="testimonios__hijos">
+            <video class="testimonios__items" controls poster="../image/angelina.jpg">
+                <source src="../video/testimonio-video" type="video/mp4">
+            </video>
+        </div>
+        <div class="testimonios__hijos">
+            <video class="testimonios__items" controls poster="../image/lewis.jpg">
+                <source src="../video/testimonio-video" type="video/mp4">
+            </video>
+        </div>
+        <div class="testimonios__hijos parrafo">
+            <p><span>LEWIS HAMILTON</span><br>Es un piloto británico de automovilismo. En Fórmula 1 desde 2007 hasta 2012, fue piloto de la escudería McLaren, con la cual fue campeón en 2008 y subcampeón en 2007.</p>
+        </div>
+    </article>
+    <!--  BENEFICIOS   -->
     <h3 class="subtittle__beneficios">BENEFICIOS</h3>
     <article class="beneficios__contenedor container-fluid">
         <div class="row">
-            <div class="card bg-dark col-sm-6 col-lg-3">
-                <img class="card-img-top" src="../image/pochoclos.jpg" alt="Card image">
+            <div class="card col-sm-6 col-lg-3">
+                <img class="card-img-top" src="../image/pochoclos-min.jpg" alt="Card image">
                 <div class="card-body">
                 <h5 class="card-title">2x1 EN CINES HOYTS</h5>
-                <p class="card-text">Validos de Lunes a Viernes en salas 2D</p>
-                <a href="#" class="btn btn-primary boton--1">OBTENER</a>
+                <p class="card-text">Validos de Lunes a Viernes en salas 2D y 3D. Horario fulltime.</p>
+                <a href="#" class="btn btn-primary boton">OBTENER</a>
                 </div>
             </div>
-            <div class="card bg-dark col-sm-6 col-lg-3">
-                <img class="card-img-top" src="../image/teatro.jpg" alt="Card image">
+            <div class="card col-sm-6 col-lg-3">
+                <img class="card-img-top" src="../image/teatro-min.jpg" alt="Card image">
                 <div class="card-body">
                 <h5 class="card-title">ENTRADAS GRATIS: TEATRO</h5>
-                <p class="card-text">En obras seleccionadas y de caridad. Validas en cualquier Teatro de Lunes a Domingos</p>
-                <a href="#" class="btn btn-primary boton--2">OBTENER</a>
+                <p class="card-text">En obras seleccionadas y de caridad. Validas en cualquier Teatro de Lunes a Domingos.</p>
+                <a href="#" class="btn btn-primary boton">OBTENER</a>
                 </div>
             </div>
-            <div class="card bg-dark col-sm-6 col-lg-3">
+            <div class="card col-sm-6 col-lg-3">
                 <img class="card-img-top" src="../image/cerveza.jpg" alt="Card image">
                 <div class="card-body">
                 <h5 class="card-title">DESCUENTO EN BARES Y RESTAURANTES</h5>
-                <p class="card-text">Cupones de hasta 50% desceunto, en dias y comidas seleccionadas</p>
-                <a href="#" class="btn btn-primary boton--3">OBTENER</a>
+                <p class="card-text">Cupones de hasta 50% desceunto, en dias y comidas seleccionadas.</p>
+                <a href="#" class="btn btn-primary boton">OBTENER</a>
                 </div>
             </div>
-            <div class="card bg-dark col-sm-6 col-lg-3">
-                <img class="card-img-top" src="../image/dasd.jpg" alt="Card image">
+            <div class="card col-sm-6 col-lg-3">
+                <img class="card-img-top" src="../image/hotsale.jpg" alt="Card image">
                 <div class="card-body">
                 <h5 class="card-title">SUMA PUNTOS CON TUS COMPRAS</h5>
-                <p class="card-text">Suma puntos, y participa de sorteos increibles</p>
-                <a href="#" class="btn btn-primary boton--4">OBTENER</a>
+                <p class="card-text">Suma puntos, y participa de sorteos increibles.</p>
+                <a href="#" class="btn btn-primary boton">OBTENER</a>
                 </div>
             </div>
-            
         </div>
     </article>
-    <h3>TESTIMONIOS</h3>
-    <article class="testimonios_contenedor container-fluid">
-        <div class="row">
-            <div class="testimonios col-sm-4 col-lg-4">
-                <video class="testimonios__items" controls poster="../image/favicom.jpg">
-                    <source src="../video/testimonio-video" type="video/mp4">
-                </video>
-            </div>
-            <div class="testimonios col-sm-4 col-lg-4">
-                <video class="testimonios__items" controls poster="../image/favicom.jpg">
-                    <source src="../video/testimonio-video" type="video/mp4">
-                </video>
-            </div>
-            <div class="testimonios col-sm-4 col-lg-4">
-                <video class="testimonios__items" controls poster="../image/favicom.jpg">
-                    <source src="../video/testimonio-video" type="video/mp4">
-                </video>
-            </div>
-        </div>
-        
-    </article>
+    <!--  BOTON FLOTANTE   -->
+    <div class="flotante">
+        <a href="#">REGISTRARME</a>
+    </div>
+    <!--  FOOTER   -->
     <article class="footer">
         <h4 class="subtittle--footer">6:AM <span>informacion</span></h4>
     </article>
@@ -123,13 +232,8 @@
     <div class="footer--epigrafe">
         <p>EMPRESA 6:AM 2022 CREATED BY ARMASDESIGN</p>
     </div>
-
-
-
-
-
-        <!--  BOOTSTRAP   -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<!--  BOOTSTRAP   -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,7 +8,10 @@ recopilar todo lo que escriba aca*/
           box-sizing: border-box;
 }
 
+/* PALETA COLORES*/
+/*FUENTE ELEGIDA google font*/
 /*INDEX*/
+/*titulo 6am*/
 h1 {
   color: white;
   background-color: black;
@@ -37,7 +40,7 @@ h1 {
   cursor: pointer;
 }
 
-/*NAVBAR MOBILE INDEX*/
+/*navbar mobile index bs*/
 .navbarMobile {
   background-color: black;
 }
@@ -46,23 +49,9 @@ h1 {
   font-size: 15px;
 }
 
-/*CARRUSEL INDEX*/
+/*carrusel index bs*/
 .carousel-item img {
   height: calc(100vh - 180px);
-}
-
-/*TITULOS PARA DESTACAR*/
-h4 {
-  font-size: 16px;
-  background-color: #f30606;
-  text-align: center;
-  padding: 10px;
-  color: white;
-  margin: 0;
-  border-top: solid 2px black;
-  border-bottom: solid 2px black;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 1000;
 }
 
 /*FOOTER SITIO WEB UTILIZANDO FLEXBOX*/
@@ -130,6 +119,7 @@ footer .links a {
   color: #00C9C8;
 }
 
+/*iconos footer fontawesone*/
 .fa-envelope {
   color: #e4c721;
   margin-left: 10px;
@@ -141,6 +131,7 @@ footer .links a {
   margin-left: 10px;
 }
 
+/*epigrafe footer*/
 .footer--epigrafe {
   text-align: center;
   font-size: 12px;
@@ -164,7 +155,7 @@ footer .links a {
   .navbarMobile {
     display: none;
   }
-  /*NAVBAR DESKOP INDEX*/
+  /*activo navbar deskop index*/
   .navDeskop {
     display: block;
     background-color: black;
@@ -287,7 +278,7 @@ footer .links a {
   background-color: black;
 }
 
-/*ANIMACION TEXTO ENVIO*/
+/*animacion texto envio gratis*/
 .envios, .flex__pago .pago--subtittle, .catalogo__subt {
   background-color: #00C9C8;
   padding: 0px;
@@ -330,10 +321,12 @@ footer .links a {
   }
 }
 
+/*MENU LINKS DE ANCLAJE PARA NAVEGAR ENTRE PAGINAS*/
 .navPages {
   display: none;
 }
 
+/*TITULO para paginas*/
 h2 {
   font-size: 50px;
   background-color: black;
@@ -348,7 +341,7 @@ h2 {
   background-color: black;
 }
 
-/*GRID CATALOGO IMAGENES*/
+/*grid catalogo galeria*/
 #grid__catalogo img {
   height: 250px;
   width: 100%;
@@ -376,6 +369,7 @@ h2 {
   font-size: 20px;
 }
 
+/*metodos de pago y form envio*/
 .flex__pago {
   background-color: #d9d9e0;
 }
@@ -425,6 +419,7 @@ h2 {
   background-color: #108383;
 }
 
+/*logistica*/
 .catalogo__subt {
   padding: 15px;
   font-weight: bold;
@@ -468,24 +463,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-/*@keyframes chicle{
-    30%{
-        -webkit-transform: 
-            scaleX(1.25)
-            scaleY(0.75);
-    }
-    50%{
-        -webkit-transform: 
-            scaleX(0.75)
-            scaleY(1.25);
-    }
-    60%{
-        -webkit-transform: 
-            scaleX(1.15)
-            scaleY(0.85);
-    }
-}*/
-/*MEDIA QUEIRS CATALOGO*/
+/*MEDIA QUERIS CATALOGO*/
 @media screen and (min-width: 480px) {
   #grid__catalogo img {
     height: 300px;
@@ -622,33 +600,27 @@ h2 {
 }
 
 /*CLUB 6AM*/
-.card {
-  color: white;
-  border-radius: 0px;
-  padding: 10px;
-}
-
-.card a {
-  display: block;
-  margin: auto;
-}
-
-.subtittle__beneficios {
-  margin-bottom: 0px;
-}
-
-.clubInfo p {
-  color: white;
-  text-align: center;
-  line-height: 30px;
-}
-
 .redesSociales__pages {
   position: absolute;
   top: 90px;
   right: 20px;
 }
 
+/*portada y breve descripcion*/
+.clubInfo {
+  background-color: black;
+}
+
+.clubInfo p {
+  margin: 0;
+  margin-top: -10px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+}
+
+/*subtitulos*/
 h3 {
   padding: 20px 0px 20px 0px;
   text-align: center;
@@ -656,40 +628,169 @@ h3 {
   background-color: #00C9C8;
 }
 
-.portadaClub {
-  width: 100vw;
-  height: calc(100vh - 130px);
-  background-image: url(../image/comunidad.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+h4 {
+  font-size: 16px;
+  background-color: #00C9C8;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 1000;
 }
 
-.boton--1 {
-  background-color: #2473db;
-  border: solid 4px #2473db;
+h4 a {
+  text-decoration: none;
+  color: white;
 }
 
-.boton--2 {
-  background-color: #1a626b;
-  border: solid 4px #1a626b;
+/*texto unete a esta gran familia*/
+.subtittle--unete:hover {
+  background-color: #108383;
+  cursor: pointer;
 }
 
-.boton--3 {
-  background-color: #1c568d;
-  border: solid 4px #1c568d;
+a:hover {
+  color: white;
 }
 
-.boton--4 {
-  background-color: #2d2e7a;
-  border: solid 4px #2d2e7a;
+/*iconos de ongs*/
+.ong {
+  background-color: #d9d9e0;
+  padding: 10px;
+  text-align: center;
 }
 
-.testimonios_contenedor {
-  margin-bottom: 30px;
+.ong .izq img {
+  width: 300px;
 }
 
-.testimonios_contenedor video {
+.ong .der img {
+  width: 250px;
+  padding-bottom: 20px;
+}
+
+/*poryectos empresa*/
+.proyectos {
+  padding: 20px;
+  background-color: #d9d9e0;
+}
+
+.proyectos .cardd {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.proyectos .cardd .face {
+  position: absolute;
   width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.proyectos .cardd .font {
+  -webkit-transform: perspective(600px) rotateY(0deg);
+          transform: perspective(600px) rotateY(0deg);
+  -webkit-box-shadow: 4px 4px 30px 2px rgba(0, 0, 0, 0.65);
+          box-shadow: 4px 4px 30px 2px rgba(0, 0, 0, 0.65);
+}
+
+.proyectos .cardd .font img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.proyectos .cardd .back {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+  background-color: #00C9C8;
+  padding: 15px;
+  color: white;
+}
+
+.proyectos .cardd .back h4 {
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+.proyectos .cardd .back p {
+  text-align: center;
+}
+
+.proyectos .cardd .back p a {
+  text-decoration: none;
+  color: white;
+}
+
+.cardd:hover .font {
+  -webkit-transform: perspective(600px) rotate(180deg);
+          transform: perspective(600px) rotate(180deg);
+}
+
+.cardd:hover .back {
+  -webkit-transform: perspective(600px) rotate(360deg);
+          transform: perspective(600px) rotate(360deg);
+}
+
+/*testimonios*/
+.testimonios {
+  margin-top: -10px;
+  background-color: #d9d9e0;
+}
+
+.testimonios video {
+  width: 100%;
+  padding: 10px;
+}
+
+.testimonios p {
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.testimonios p span {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+/*beneficios*/
+.subtittle__beneficios {
+  margin-bottom: 0px;
+}
+
+.beneficios__contenedor .row .card {
+  background-color: #d9d9e0;
+  color: black;
+  border-radius: 0px;
+  padding: 20px 10px;
+}
+
+.beneficios__contenedor .row .card a {
+  display: block;
+  margin: auto;
+}
+
+.beneficios__contenedor .row .card .boton {
+  background-color: #00C9C8;
+  border: solid 2px #00C9C8;
+}
+
+/*boton flotante*/
+.flotante {
+  display: none;
 }
 
 /*MEDIA QUERIS CLUB*/
@@ -697,6 +798,12 @@ h3 {
   .clubInfo p {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .proyectos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -706,14 +813,97 @@ h3 {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .ong {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 200px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .ong div {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .proyectos {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .proyectos div {
+    margin-bottom: 20px;
+  }
+  .testimonios {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .testimonios div {
+    margin: 10px;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .clubInfo p {
     font-size: 30px;
     line-height: 50px;
   }
+  .testimonios p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .testimonios p {
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .flotante {
+    display: inline-block;
+    background-color: #108383;
+    padding: 20px;
+    width: 160px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .flotante a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+  }
+  .flotante:hover {
+    cursor: pointer;
+    background-color: #105f5f;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .testimonios p {
+    font-size: 22px;
+    line-height: 40px;
+  }
+  .clubInfo p {
+    padding: 60px;
+  }
 }
 
 /*SOBRE NOSOTROS*/
+/*TITULO sn*/
 h2 {
   background-color: black;
   text-align: center;
@@ -724,6 +914,7 @@ h2 {
   margin: 0;
 }
 
+/*subtitulos*/
 .subtittle--left {
   margin-top: -20px;
 }
@@ -734,6 +925,7 @@ h2 {
   right: 20px;
 }
 
+/*portada*/
 .sobreNosotros {
   height: 100vw;
   background-image: url(../image/futuro-min.jpg);
@@ -756,6 +948,7 @@ h2 {
   display: none;
 }
 
+/*historia empresa*/
 .historia {
   background-color: #d9d9e0;
 }
@@ -775,6 +968,7 @@ h2 {
   padding-bottom: 20px;
 }
 
+/*aliados*/
 .aliados__grid {
   margin-top: -10px;
   padding: 10px;
@@ -796,6 +990,7 @@ h2 {
   display: none;
 }
 
+/*miembros*/
 .miembros__grid {
   background-color: #d9d9e0;
   text-align: center;
@@ -985,8 +1180,13 @@ h2 {
 }
 
 /*CONTACTO*/
+.contacto--body {
+  background-color: #d9d9e0;
+}
+
 form {
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 form div {
@@ -995,9 +1195,9 @@ form div {
 
 form .bottom input {
   color: white;
-  background-color: red;
+  background-color: #00C9C8;
   padding: 10px 15px;
-  border: solid 2px black;
+  border: solid 2px #00C9C8;
   border-radius: 4px;
 }
 

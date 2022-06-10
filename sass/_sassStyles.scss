@@ -3,17 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* PALETA COLORES*/
 $estilos: (
     color: rgb(0,0,0),
     color2: rgb(255, 255, 255),
     color3: #00C9C8,
     color4: #d9d9e0,
 );
+/*FUENTE ELEGIDA google font*/
 $fuente: 'Montserrat', sans-serif;
 
-
 /*INDEX*/
+/*titulo 6am*/
 h1{
     color: map-get($estilos, color2);
     background-color: map-get($estilos, color);
@@ -40,9 +41,7 @@ h1{
         cursor: pointer;
     }
 }
-
-
-/*NAVBAR MOBILE INDEX*/
+/*navbar mobile index bs*/
 .navbarMobile{
     background-color: map-get($estilos, color);
 
@@ -50,27 +49,10 @@ h1{
         font-size: 15px;
     }
 }
-
-
-/*CARRUSEL INDEX*/
+/*carrusel index bs*/
 .carousel-item img{
     height: calc(100vh - 180px);
 }
-
-/*TITULOS PARA DESTACAR*/
-h4{
-    font-size: 16px;
-    background-color: rgb(243, 6, 6);
-    text-align: center;
-    padding: 10px;
-    color: map-get($estilos, color2);
-    margin: 0;
-    border-top: solid 2px map-get($estilos, color);
-    border-bottom: solid 2px map-get($estilos, color);
-    font-family: $fuente;
-    font-weight: 1000;
-}
-
 /*FOOTER SITIO WEB UTILIZANDO FLEXBOX*/ 
 .footer{
     border-bottom: solid 2px map-get($estilos, color2);
@@ -86,7 +68,6 @@ h4{
         }
     }
 }
-
 footer{
     font-family: $fuente;
     text-align: center;
@@ -114,14 +95,12 @@ footer{
         }
     }
 }
-
 .footer__left{
     i{
         color: rgb(240, 116, 15);
         margin-left: 10px;
     }
 }
-
 .footer__center{
     border-top: solid 2px map-get($estilos, color2);
     border-bottom: solid 2px map-get($estilos, color2);
@@ -131,7 +110,7 @@ footer{
         color: #00C9C8;
     }
 }
-
+/*iconos footer fontawesone*/
 .fa-envelope{
     color: rgb(228, 199, 33);
     margin-left: 10px;
@@ -141,6 +120,7 @@ footer{
     background-color: rgb(39, 223, 14);
     margin-left: 10px;
 }
+/*epigrafe footer*/
 .footer--epigrafe{
     text-align: center;
     font-size: 12px;
@@ -151,7 +131,6 @@ footer{
         margin: 0;
     }
 }
-
 /*MEDIA QUERIS INDEX*/
 @media screen and (max-width: 576px){
     .navDeskop{
@@ -162,14 +141,13 @@ footer{
     .navbarMobile{
         display: none;
     }
-    /*NAVBAR DESKOP INDEX*/
+    /*activo navbar deskop index*/
     .navDeskop{
         display: block;
         background-color: map-get($estilos, color);
     }
     .navbarIndex{
         margin-bottom: -15px;
-
         ul{
             padding-right: 0px;
             list-style: none;
@@ -182,7 +160,6 @@ footer{
             border-right: solid 2px map-get($estilos, color2);
             padding: 10px;
         }
-
         ul li a{
             text-decoration: none;
             color: map-get($estilos, color2);
@@ -190,16 +167,13 @@ footer{
             display: block;
             padding: 0px;
             }
-        
         ul li:hover{
                 background-color: map-get($estilos, color2);
             }
-        
-            ul li a:hover{
+        ul li a:hover{
                 color: map-get($estilos, color);
             }
     }
-
     .redesSociales{
         position: absolute;
         top: 10px;
@@ -252,7 +226,6 @@ footer{
         flex-grow: 1;
     }
 }
-
 @media screen and (min-width: 992px){
     h1{
         font-size: 110px;
@@ -282,8 +255,7 @@ footer{
 .bodyCatalogo{
     background-color: map-get($estilos, color)
 }
-
-/*ANIMACION TEXTO ENVIO*/
+/*animacion texto envio gratis*/
 .envios{
     background-color: map-get($estilos, color3 );
     padding: 0px;
@@ -300,7 +272,6 @@ footer{
         animation-iteration-count: infinite;
     }
 }
-
 @keyframes idavuelta{
     50%{
         transform: translateX(40px);
@@ -309,9 +280,11 @@ footer{
         transform: translateX(-40px);
     }
 }
+/*MENU LINKS DE ANCLAJE PARA NAVEGAR ENTRE PAGINAS*/
 .navPages{
     display: none;
 }
+/*TITULO para paginas*/
 h2{
     font-size: 50px;
     background-color: map-get($estilos, color);
@@ -320,26 +293,20 @@ h2{
     padding: 10px;
     margin: 0;
 }
-
 /*REDES SOCIALES CATALOGO Y DEMAS PAGES*/
-
 .redesSociales--catalogo{
     @extend .redesSociales;
 }
-
 .navCatalogo{
     background-color: map-get($estilos, color);
 }
-
-/*GRID CATALOGO IMAGENES*/
+/*grid catalogo galeria*/
 #grid__catalogo img{
     height: 250px;
     width: 100%;
 }
-
 .grid__catalogo--hijos{
     position: relative;
-
     img:hover{
         background: #F5A9A9;
         /*animation: 1s chicle 1;*/
@@ -356,7 +323,7 @@ h2{
         font-size: 20px;
     }
 }
-
+/*metodos de pago y form envio*/
 .flex__pago{
     background-color: #d9d9e0;
     .pago--subtittle{
@@ -401,6 +368,7 @@ h2{
         }
     }
 }
+/*logistica*/
 .catalogo__subt{
     @extend .envios;
     padding: 15px;
@@ -441,28 +409,7 @@ h2{
         margin-bottom: 30px;
     }
 }
-
-
-/*@keyframes chicle{
-    30%{
-        -webkit-transform: 
-            scaleX(1.25)
-            scaleY(0.75);
-    }
-    50%{
-        -webkit-transform: 
-            scaleX(0.75)
-            scaleY(1.25);
-    }
-    60%{
-        -webkit-transform: 
-            scaleX(1.15)
-            scaleY(0.85);
-    }
-}*/
-
-
-/*MEDIA QUEIRS CATALOGO*/
+/*MEDIA QUERIS CATALOGO*/
 @media screen and (min-width: 480px){
     #grid__catalogo img{
         height: 300px;
@@ -473,7 +420,6 @@ h2{
     .navPages{
         display: block;
         background-color: map-get($estilos, color);
-        
         ul{
             list-style: none;
             margin: 0px;
@@ -482,12 +428,10 @@ h2{
             position: relative;
             font-family: 'Montserrat', sans-serif;
         }
-
         li{
             display: inline-block;
             border-right: 2px solid map-get($estilos, color2);
         }
-
         a{
             text-decoration: none;
             margin: 15px;
@@ -495,7 +439,6 @@ h2{
             font-size: 16px;
         }
     }
-    
     .navCatalogo{
         display: none;
     }
@@ -535,7 +478,6 @@ h2{
             transform: scale(1.3);
         }
     }
-    
     #grid__catalogo{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -562,7 +504,6 @@ h2{
             flex-basis: 100%;
         }
     }
-    
 }
 @media screen and (min-width: 900px){
     #grid__envios{
@@ -595,64 +536,169 @@ h2{
     }
 }
 
-
 /*CLUB 6AM*/
-.card{
-    color: map-get($estilos, color2);
-    border-radius: 0px;
-    padding: 10px;
-    a{
-        display: block;
-        margin: auto;
-    }
-}
-.subtittle__beneficios{
-    margin-bottom: 0px;
-}
-.clubInfo p{
-    color: map-get($estilos, color2);
-    text-align: center;
-    line-height: 30px;
-}
 .redesSociales__pages{
     @extend .redesSociales;
     position: absolute;
     top: 90px;
     right: 20px;
 }
-
+/*portada y breve descripcion*/
+.clubInfo{
+    background-color: map-get($estilos, color);
+}
+.clubInfo p{
+    margin: 0;
+    margin-top: -10px;
+    padding: 10px;
+    color: map-get($estilos, color2);
+    text-align: center;
+    line-height: 30px;
+}
+/*subtitulos*/
 h3{
     padding: 20px 0px 20px 0px;
     text-align: center;
     color: map-get($estilos, color2);
     background-color: map-get($estilos, color3);
 }
-.portadaClub{
-    width: 100vw;
-    height: calc(100vh - 130px);
-    background-image: url(../image/comunidad.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-$coloresboton: (
-    1: rgb(36, 115, 219),
-    2: rgb(26, 98, 107),
-    3: rgb(28, 86, 141),
-    4: rgb(45, 46, 122),
-);
-@each $colors, $colorboton in $coloresboton {
-    .boton--#{$colors}{
-        background-color: $colorboton;
-        border: solid 4px $colorboton;
+h4{
+    font-size: 16px;
+    background-color: map-get($estilos, color3);
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-family: $fuente;
+    font-weight: 1000;
+    a{
+        text-decoration: none;
+        color: map-get($estilos, color2);
     }
 }
-
-.testimonios_contenedor{
-    margin-bottom: 30px;
+/*texto unete a esta gran familia*/
+.subtittle--unete:hover{
+    background-color: #108383;
+    cursor: pointer;
+}
+a:hover{
+    color: map-get($estilos, color2);
+}
+/*iconos de ongs*/
+.ong{
+    background-color: map-get($estilos, color4);
+    padding: 10px;
+    text-align: center;
+    .izq{
+        img{
+            width: 300px;
+        }
+    }
+    .der{
+        img{
+            width: 250px;
+            padding-bottom: 20px;
+        }
+    }
+}
+/*poryectos empresa*/
+.proyectos{
+    padding: 20px;
+    background-color: map-get($estilos, color4);
+    .cardd{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-top: 20px;
+        .face{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: .5s;
+        }
+        .font{
+            transform: perspective(600px) rotateY(0deg);
+            box-shadow:  4px 4px 30px 2px rgba(0,0,0,0.65);
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        }
+        .back{
+            transform: perspective(600px) rotateY(180deg);
+            background-color: map-get($estilos, color3);
+            padding: 15px;
+            color: rgb(255, 255, 255);
+            h4{
+                margin-top: 40px;
+                font-size: 22px;
+            }
+            p{
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: map-get($estilos, color2);
+                }
+            }
+        }
+    }
+}
+.cardd:hover .font{
+    transform: perspective(600px) rotate(180deg);
+}
+.cardd:hover .back{
+    transform: perspective(600px) rotate(360deg);
+}
+/*testimonios*/
+.testimonios{
+    margin-top: -10px;
+    background-color: map-get($estilos, color4);
     video{
         width: 100%;
+        padding: 10px;
     }
+    p{
+        padding: 10px;
+        font-size: 16px;
+        font-family: $fuente;
+        text-align: center;
+        span{
+            font-size: 20px;
+            font-family: $fuente;
+            text-align: center;
+        }
+    }
+}
+/*beneficios*/
+.subtittle__beneficios{
+    margin-bottom: 0px;
+}
+.beneficios__contenedor{
+    .row{
+        .card{
+            background-color: map-get($estilos, color4);
+            color: map-get($estilos, color);
+            border-radius: 0px;
+            padding: 20px 10px;
+            a{
+                display: block;
+                margin: auto;
+            }
+            .boton{
+                background-color: map-get($estilos, color3);
+                border: solid 2px map-get($estilos, color3);
+            }
+        }
+    }
+}
+/*boton flotante*/
+.flotante{
+    display: none;
 }
 /*MEDIA QUERIS CLUB*/
 @media screen and (min-width: 480px){
@@ -660,11 +706,41 @@ $coloresboton: (
     margin-left: 20px;
     margin-right: 20px;
     }
+    .proyectos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-
 @media screen and (max-width: 600px){
     .redesSociales__pages{
         display: none;
+    }
+}
+@media screen and (min-width: 600px){
+    .ong{
+        display: flex;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        div{
+            width: 400px;
+        }
+    }
+}
+@media screen and (min-width: 800px){
+    .proyectos{
+        grid-template-columns: repeat(3, 1fr);
+        div{
+            margin-bottom: 20px;
+        }
+    }
+    .testimonios{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        div{
+            margin: 10px;
+        }
     }
 }
 @media screen and (min-width: 900px){
@@ -672,11 +748,56 @@ $coloresboton: (
         font-size: 30px;
         line-height: 50px;
     }
+    .testimonios{
+        p{
+            font-size: 20px;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .testimonios{
+        p{
+            font-size: 20px;
+            line-height: 35px;
+        }
+    }
+    .flotante{
+        display: inline-block;
+        background-color:#108383;
+        padding: 20px;
+        width: 160px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 10px;
+        text-align: center;
+        a{
+            text-align: center;
+            text-decoration: none;
+            color: map-get($estilos, color2);
+            font-family: $fuente;
+            font-weight: bold;
+        }
+    }
+    .flotante:hover{
+        cursor: pointer;
+        background-color:#105f5f;
+    }
+}
+@media screen and (min-width: 1100px){
+    .testimonios{
+        p{
+            font-size: 22px;
+            line-height: 40px;
+        }
+    }
+    .clubInfo p{
+        padding: 60px;
+    }
 }
 
-
 /*SOBRE NOSOTROS*/
-
+/*TITULO sn*/
 h2{
     background-color: map-get($estilos, color );
     text-align: center;
@@ -686,6 +807,7 @@ h2{
     padding-bottom: 20px;
     margin: 0;
 }
+/*subtitulos*/
 .subtittle--left{
     margin-top: -20px;
 }
@@ -695,7 +817,7 @@ h2{
     top: 90px;
     right: 20px;
 }
-
+/*portada*/
 .sobreNosotros{
     height: 100vw;
     background-image: url(../image/futuro-min.jpg);
@@ -715,6 +837,7 @@ h2{
         }
     }
 }
+/*historia empresa*/
 .historia{
     background-color: map-get($estilos, color4);
     img{
@@ -730,7 +853,7 @@ h2{
         padding-bottom: 20px;
     }
 }
-
+/*aliados*/
 .aliados__grid{
     margin-top: -10px;
     padding: 10px;
@@ -746,6 +869,7 @@ h2{
         display: none;
     }
 }
+/*miembros*/
 .miembros__grid{
     background-color: map-get($estilos, color4 );
     text-align: center;
@@ -768,8 +892,6 @@ h2{
         }
     }
 }
-
-
 /*MEDIA QUEIRIS SOBRE NOSOTROS*/
 @media screen and (min-width: 400px){
     .sobreNosotros{
@@ -904,7 +1026,6 @@ h2{
         padding-right: 150px;
     }
 }
-
 @media screen and (min-width: 1100px){
     .sobreNosotros {
         p{
@@ -937,19 +1058,22 @@ h2{
     
 }
 
-
 /*CONTACTO*/
+.contacto--body{
+    background-color: map-get($estilos, color4 );
+}
 form{
     text-align: center;
+    font-family: $fuente;
     div{
         margin: 10px;
     }
     .bottom{
         input{
             color: map-get($estilos, color2);
-            background-color: rgb(255, 0, 0);
+            background-color: map-get($estilos, color3);
             padding:  10px 15px;
-            border: solid 2px map-get($estilos, color);
+            border: solid 2px map-get($estilos, color3);
             border-radius: 4px;
         }
         
